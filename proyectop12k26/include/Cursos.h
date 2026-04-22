@@ -5,19 +5,24 @@
 class Cursos
 {
     public:
-        Cursos();
-        string obtenerNombreCurso(string pNombreCurso);
-        string obtenerRequesitoDeCursos(string pPreRequisitoDeCursos);
-        bool obtenerEstadoDeCursos(string pEstadoCurso);
-
+        Cursos(string nombreCurso, int codigoCurso, string preRequisitoDeCursos, char estadoCurso);
+        string getnombreCurso();
+        string setnombreCurso(string nombreCurso);
+        string getpreRequisitoDeCurso();
+        string setpreRequisitoDeCurso(string preRequisitoDeCursos);
+        int getcodigoCurso();
+        int setcodigoCurso(int codigoCurso);
+        char getestadoCurso();
+        char setestadoCurso(char estadoCurso);
+        void prueba();
 
     protected:
 
     private:
-        nombreCurso;
-        preRequisitoDeCursos;
-        codigoCurso;
-        estadoCurso;
+        string nombreCurso;
+        string preRequisitoDeCursos;
+        int codigoCurso;
+        char estadoCurso;
 
 };
 
