@@ -1,42 +1,52 @@
 #include "Cursos.h"
+#include <string>
+using namespace std;
 
-Cursos::Cursos(string nombreCurso, int codigoCurso, string preRequisitoDeCursos, char estadoCurso)
+Cursos::Cursos()
+{
+
+}
+
+Cursos::Cursos(string nombreCurso, int codigoCurso, string preRequisitoDeCurso, bool estadoCurso)
 {
     this -> nombreCurso = nombreCurso;
     this -> codigoCurso = codigoCurso;
-    this -> preRequisitoDeCursos = preRequisitoDeCursos;
+    this -> preRequisitoDeCurso = preRequisitoDeCurso;
     this -> estadoCurso = estadoCurso;
 }
 
+//Getters
 string Cursos::getnombreCurso()
 {
     return this -> nombreCurso;
 }
-string Cursos::setnombreCurso(string nombreCurso)
-{
-    this -> nombreCurso = nombreCurso;
-}
 string Cursos::getpreRequisitoDeCurso()
 {
-    return this -> preRequisitoDeCursos;
-}
-string Cursos::setpreRequisitoDeCurso(string preRequisitoDeCurso)
-{
-    this -> preRequisitoDeCursos = preRequisitoDeCurso;
+    return this -> preRequisitoDeCurso;
 }
 int Cursos::getcodigoCurso()
 {
     return this -> codigoCurso;
 }
-int Cursos::setcodigoCurso(int codigoCurso)
-{
-    this -> codigoCurso = codigoCurso;
-}
-char Cursos::getestadoCurso()
+bool Cursos::getestadoCurso()
 {
     return this -> estadoCurso;
 }
-char Cursos::setestadoCurso(char estadoCurso)
+
+//Setters
+void Cursos::setnombreCurso(string nombreCurso)
+{
+    this -> nombreCurso = nombreCurso;
+}
+void Cursos::setpreRequisitoDeCurso(string preRequisitoDeCurso)
+{
+    this -> preRequisitoDeCurso = preRequisitoDeCurso;
+}
+void Cursos::setcodigoCurso(int codigoCurso)
+{
+    this -> codigoCurso = codigoCurso;
+}
+void Cursos::setestadoCurso(bool estadoCurso)
 {
     this -> estadoCurso = estadoCurso;
 }

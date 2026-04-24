@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1776869130 source:c:\users\fcast\onedrive\documentos\tercer semestre\programaci”n i\proyectop12k26\proyectop12k26\main.cpp
+	<iostream>
+
+1776869130 source:c:\users\fcast\onedrive\documentos\tercer semestre\programaci”n i\proyectop12k26\proyectop12k26\src\proyecto.cpp
+	"proyecto.h"
+
+1776869130 c:\users\fcast\onedrive\documentos\tercer semestre\programaci”n i\proyectop12k26\proyectop12k26\include\proyecto.h
+
+1776999303 source:c:\users\fcast\onedrive\documentos\tercer semestre\programaci”n i\proyectop12k26\proyectop12k26\src\cursos.cpp
+	"Cursos.h"
+	<string>
+
+1776999274 c:\users\fcast\onedrive\documentos\tercer semestre\programaci”n i\proyectop12k26\proyectop12k26\include\cursos.h
+	<string>
+
