@@ -34,8 +34,12 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="include/carrera.h" />
+		<Unit filename="include/inscipcion.h" />
 		<Unit filename="include/proyecto.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/carrera.cpp" />
+		<Unit filename="src/inscipcion.cpp" />
 		<Unit filename="src/proyecto.cpp" />
 		<Extensions />
 	</Project>

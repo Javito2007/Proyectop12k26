@@ -1,0 +1,23 @@
+# depslib dependency file v1.0
+1777081497 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\main.cpp
+	"Carrera.h"
+
+1776870878 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\proyecto.cpp
+	"proyecto.h"
+
+1776870878 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\proyecto.h
+
+1777081364 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\carrera.cpp
+	<iostream>
+	"Carrera.h"
+
+1777178093 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\carrera.h
+	<string>
+
+1777177999 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\inscipcion.cpp
+	<iostream>
+	"inscipcion.h"
+
+1777178158 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\inscipcion.h
+	<string>
+
