@@ -1,5 +1,5 @@
 #include <iostream>
-#include "Carrera.h"
+#include "Carrera.h"                  //Clase creada por David Alegria
 using namespace std;
 
 void Carreras::ingresarDatos()

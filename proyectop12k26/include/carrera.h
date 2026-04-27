@@ -1,6 +1,6 @@
 #ifndef carrera_h
 #define carrera_h
-#include <string>
+#include <string>                     //Clase creada por David Alegria
 using namespace std;
 
 class Carreras
