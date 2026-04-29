@@ -155,7 +155,7 @@ void Alumnos::registroDatos()
             cout << "Ingrese su año de nacimiento (1940-2009): " << endl;
             cin >> this -> anioNacimiento;
             if (this -> anioNacimiento < 1940 || this -> anioNacimiento > 2009){
-                cout << "Error, mes no valido" << endl;
+                cout << "Error, año no valido" << endl;
                 this_thread::sleep_for(chrono::seconds(2));
             }
         }while (!(this -> anioNacimiento >= 1940 && this -> anioNacimiento <= 2009));
