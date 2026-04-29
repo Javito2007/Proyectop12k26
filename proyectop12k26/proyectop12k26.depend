@@ -1,5 +1,6 @@
 # depslib dependency file v1.0
 <<<<<<< HEAD
+<<<<<<< HEAD
 1777179357 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\main.cpp
 	<iostream>
 	"Carrera.h"
@@ -7,6 +8,9 @@
 =======
 <<<<<<< HEAD
 1776869130 source:c:\users\fcast\onedrive\documentos\tercer semestre\programaci”n i\proyectop12k26\proyectop12k26\main.cpp
+=======
+1777429885 source:c:\users\fcast\onedrive\documentos\tercer semestre\programaci”n i\proyectop12k26\proyectop12k26\main.cpp
+>>>>>>> 2c7de67c6c313837300469278fb23eb2394983b4
 	<iostream>
 
 1776869130 source:c:\users\fcast\onedrive\documentos\tercer semestre\programaci”n i\proyectop12k26\proyectop12k26\src\proyecto.cpp
@@ -14,11 +18,23 @@
 
 1776869130 c:\users\fcast\onedrive\documentos\tercer semestre\programaci”n i\proyectop12k26\proyectop12k26\include\proyecto.h
 
-1776999303 source:c:\users\fcast\onedrive\documentos\tercer semestre\programaci”n i\proyectop12k26\proyectop12k26\src\cursos.cpp
+1776999917 source:c:\users\fcast\onedrive\documentos\tercer semestre\programaci”n i\proyectop12k26\proyectop12k26\src\cursos.cpp
 	"Cursos.h"
 	<string>
 
-1776999274 c:\users\fcast\onedrive\documentos\tercer semestre\programaci”n i\proyectop12k26\proyectop12k26\include\cursos.h
+1776999917 c:\users\fcast\onedrive\documentos\tercer semestre\programaci”n i\proyectop12k26\proyectop12k26\include\cursos.h
+	<string>
+
+1777429971 source:c:\users\fcast\onedrive\documentos\tercer semestre\programaci”n i\proyectop12k26\proyectop12k26\src\alumnos.cpp
+	"Alumnos.h"
+	<iostream>
+	<string>
+	<cstdlib>
+	<ctime>
+	<thread>
+	<chrono>
+
+1777429507 c:\users\fcast\onedrive\documentos\tercer semestre\programaci”n i\proyectop12k26\proyectop12k26\include\alumnos.h
 	<string>
 >>>>>>> main
 
