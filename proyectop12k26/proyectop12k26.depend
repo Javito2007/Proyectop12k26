@@ -1,6 +1,16 @@
 # depslib dependency file v1.0
 <<<<<<< HEAD
+<<<<<<< HEAD
+1777179357 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\main.cpp
+	<iostream>
+	"Carrera.h"
+	"Inscipcion.h"
+=======
+<<<<<<< HEAD
 1776869130 source:c:\users\fcast\onedrive\documentos\tercer semestre\programaci”n i\proyectop12k26\proyectop12k26\main.cpp
+=======
+1777429885 source:c:\users\fcast\onedrive\documentos\tercer semestre\programaci”n i\proyectop12k26\proyectop12k26\main.cpp
+>>>>>>> 2c7de67c6c313837300469278fb23eb2394983b4
 	<iostream>
 
 1776869130 source:c:\users\fcast\onedrive\documentos\tercer semestre\programaci”n i\proyectop12k26\proyectop12k26\src\proyecto.cpp
@@ -8,18 +18,46 @@
 
 1776869130 c:\users\fcast\onedrive\documentos\tercer semestre\programaci”n i\proyectop12k26\proyectop12k26\include\proyecto.h
 
-1776999303 source:c:\users\fcast\onedrive\documentos\tercer semestre\programaci”n i\proyectop12k26\proyectop12k26\src\cursos.cpp
+1776999917 source:c:\users\fcast\onedrive\documentos\tercer semestre\programaci”n i\proyectop12k26\proyectop12k26\src\cursos.cpp
 	"Cursos.h"
 	<string>
 
-1776999274 c:\users\fcast\onedrive\documentos\tercer semestre\programaci”n i\proyectop12k26\proyectop12k26\include\cursos.h
+1776999917 c:\users\fcast\onedrive\documentos\tercer semestre\programaci”n i\proyectop12k26\proyectop12k26\include\cursos.h
 	<string>
+
+1777429971 source:c:\users\fcast\onedrive\documentos\tercer semestre\programaci”n i\proyectop12k26\proyectop12k26\src\alumnos.cpp
+	"Alumnos.h"
+	<iostream>
+	<string>
+	<cstdlib>
+	<ctime>
+	<thread>
+	<chrono>
+
+1777429507 c:\users\fcast\onedrive\documentos\tercer semestre\programaci”n i\proyectop12k26\proyectop12k26\include\alumnos.h
+	<string>
+>>>>>>> main
 
 1776870878 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\proyecto.cpp
 	"proyecto.h"
 
 1776870878 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\proyecto.h
 
+<<<<<<< HEAD
+1777179357 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\carrera.cpp
+	<iostream>
+	"Carrera.h"
+
+1777179809 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\carrera.h
+	<string>
+
+1777179577 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\inscipcion.cpp
+	<iostream>
+	"inscipcion.h"
+
+1777179754 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\inscipcion.h
+	<string>
+=======
 1777304279 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\main.cpp
 	<iostream>
 
@@ -38,4 +76,5 @@
 
 1776869199 c:\users\intecapabner\documents\lab progra1\programacion 1\programacion_1_umg\proyecto final\proyectop12k26\proyectop12k26\include\proyecto.h
 >>>>>>> 25a05118df0520f93fe5c3798fd2548c7ff9709c
+>>>>>>> main
 
