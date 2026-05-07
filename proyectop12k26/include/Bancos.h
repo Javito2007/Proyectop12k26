@@ -12,7 +12,8 @@ class Bancos
         bool InfoTransferencia(string nombreBanco, string nombreCliente, long long numeroTarjeta);
         bool InfoPagoPlanilla(string nombreBanco, string nombreCliente, int idCuenta);
         bool procesoTransferencia(long long numeroTarjeta, double monto, double saldo);
-        bool procesoPagoPlanilla(int idCuenta, double monto, double saldoCuenta);
+        bool procesoPagoPlanilla(int idCuenta, double monto
+                                 , double saldoCuenta);
 
         bool crearCuenta(string nombreCliente, double monto, string nombreBanco);
         bool guardarCuenta(int idCuenta, string nombreCliente, double saldo, double movimiento, long long numeroTarjeta, string nombreBanco);
