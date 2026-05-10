@@ -42,22 +42,14 @@ void GeneradorConstancias::constanciaDocente() {
     cout << "No. Transferencia: " << (1000 + rand() % 9000) << endl;
 }
 
-void GeneradorConstancias::constanciaEmpleado() {
-    imprimirEncabezadoBanco();
-    cout << "Constancia de pago del sueldo (LIMPIEZA)" << endl;
-    cout << "Empleado: " << nombre << endl;
-    cout << "Monto pagado: Q" << monto << endl;
-    cout << "No. Transferencia: " << (100 + rand() % 900) << endl;
-}
 
 void GeneradorConstancias::entregarConstancia() {
     if (tipoPersona == 1) {
         constanciaAlumno();
     } else if (tipoPersona == 2) {
         constanciaDocente();
-    } else if (tipoPersona == 3) {
-        constanciaEmpleado();
-    } else {
+    }
+     else {
         cout << "Error: No hay datos para generar constancia." << endl;
     }
 }
