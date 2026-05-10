@@ -11,11 +11,15 @@
 
 1776869130 dc537b6a9e26bca804ea167a026ba36d93c43
 
-1778122531 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\main.cpp
+1778184652 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\main.cpp
 	<iostream>
 	<fstream>
 	"usuarios.h"
 	"bitacora.h"
+	"Bancos.h"
+	"Recepcion.h"
+	"GeneradorConstancias.h"
+	"Alumnos.h"
 
 1777179357 n.h"
 
@@ -75,11 +79,12 @@
 	<string>
 	<vector>
 
-1777501103 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\inscipcion.cpp
+1778184652 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\inscipcion.cpp
 	<iostream>
+	<fstream>
 	"inscipcion.h"
 
-1777501103 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\inscipcion.h
+1778184652 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\inscipcion.h
 	<string>
 
 1778122531 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\cursos.cpp
@@ -108,17 +113,24 @@
 1778122318 c:\users\fcast\onedrive\documentos\tercer semestre\programaci�n i\proyectop12k26\proyectop12k26\include\facultades.h
 	<string>
 
-1778122531 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\alumnos.cpp
+1778184652 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\alumnos.cpp
 	"Alumnos.h"
+	"Carrera.h"
 	<iostream>
+	<fstream>
 	<string>
+	<stdlib.h>
 	<cstdlib>
 	<ctime>
 	<thread>
 	<chrono>
+	<vector>
+	<iomanip>
+	<conio.h>
 
-1778122530 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\alumnos.h
+1778184652 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\alumnos.h
 	<string>
+	<vector>
 
 1778122531 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\facultades.cpp
 	"facultades.h"
@@ -282,4 +294,67 @@
 	<conio.h>
 	<iostream>
 	"bitacora.h"
+
+1778122531 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\bitacora.cpp
+	"bitacora.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1778122531 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\bitacora.h
+	<iostream>
+
+1778122531 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\usuarios.cpp
+	"usuarios.h"
+	<fstream>
+	<cstdlib>
+	<conio.h>
+	<iostream>
+	"bitacora.h"
+
+1778122531 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\usuarios.h
+	<iostream>
+
+1778184652 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\bancos.h
+	<string>
+
+1778184652 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\recepcion.h
+	<iostream>
+	<string>
+	"Alumnos.h"
+
+1778184652 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\generadorconstancias.h
+	<iostream>
+	<string>
+
+1778184652 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\bancos.cpp
+	"Bancos.h"
+	<iostream>
+	<random>
+	<string>
+	<fstream>
+	<iomanip>
+
+1778184652 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\generadorconstancias.cpp
+	"GeneradorConstancias.h"
+	<cstdlib>
+	<ctime>
+
+1778184652 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\horarios.cpp
+	"Horarios.h"
+
+1778184652 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\horarios.h
+	<iostream>
+	<vector>
+	<string>
+	<fstream>
+	"Cursos.h"
+
+1778184652 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\recepcion.cpp
+	"Recepcion.h"
+	<iostream>
+	<string>
 
