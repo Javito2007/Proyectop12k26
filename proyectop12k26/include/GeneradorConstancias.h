@@ -30,7 +30,6 @@ class GeneradorConstancias {
         void imprimirEncabezadoBanco();
         void constanciaAlumno();
         void constanciaDocente();
-        void constanciaEmpleado();
 };
 
 #endif
