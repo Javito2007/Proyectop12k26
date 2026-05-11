@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 //codigo relizado, documentado y comentado el dia 4 de mayo de 2026 por los alumnos
 //9959-25-4900: Jhonny Flores
 //9959-25-6194: Juan Jolon
 //9959-25-7728: Jose Barrios
 //9959-25-4992: Josue Muy
+=======
+//Creado el día 4 de mayo por los alumnos
+//9959-25-4900: Jhonny Flores
+//9959-25-4992: Josue Muy
+//9959-25-6194: Juan Jolon
+//9959-25-7728: Jose Barrios
+>>>>>>> 681a2b0eeace5d3189fbaadd9e890b00214e2ed0
 
 #include <iostream>
 #include "RegistrarNotas.h"

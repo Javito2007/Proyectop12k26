@@ -1,16 +1,14 @@
-#include "RegistrarNotas.h" //Juan Jolon 9959-25-6194 y Jose Javier 9959-25-7728
+#include "menuNotas.h"
 #include <iostream>
 using namespace std;
 
 bool SistemaNotas::iniciar() {
-    if (!sesion.loginUsuarios()) { //verifica si el usuario puede iniciar sesion
+    if (!sesion.loginUsuarios()) {
         cout << "Acceso denegado. Cerrando sistema." << endl;
         return false;
     }
-    //Guarda nombre de usuario activo
     usuarioActivo = sesion.getNombre();
 
-    //Almacena cantidad de alumnos
     int cantAlumnos;
     cout << "\n¿Cuantos alumnos desea registrar en el sistema? ";
     cin >> cantAlumnos;
@@ -68,8 +66,6 @@ void SistemaNotas::ejecutarMenu() {
         }
     } while (opcion != 9);
 }
-
-
 #include "SistemaNotas.h"
 
 int main() {
@@ -78,3 +74,4 @@ int main() {
     sistema.ejecutarMenu();
     return 0;
 }
+
