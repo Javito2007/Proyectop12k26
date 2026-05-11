@@ -1,3 +1,6 @@
+// Este trabajo fue realizado por 9959-25-4900: Jhonny Flores el día 4 de mayo de 2026
+//Tambien fue editado y comentado el día 7 de mayo de 2026
+
 #include <iostream>
 #include <fstream>
 #include <sstream>

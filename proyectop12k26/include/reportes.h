@@ -1,3 +1,5 @@
+// Este trabajo fue realizado por 9959-25-4900: Jhonny Flores el día 4 de mayo de 2026
+
 #ifndef REPORTES_H
 #define REPORTES_H
 
