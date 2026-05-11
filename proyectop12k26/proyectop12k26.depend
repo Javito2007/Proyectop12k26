@@ -827,3 +827,38 @@
 	<iostream>
 	"bitacora.h"
 
+1778079770 source:c:\users\juana\downloads\proyectop12k26\proyectop12k26\src\bitacora.cpp
+	"bitacora.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1778079770 c:\users\juana\downloads\proyectop12k26\proyectop12k26\include\bitacora.h
+	<iostream>
+
+1778079770 source:c:\users\juana\downloads\proyectop12k26\proyectop12k26\src\facultades.cpp
+	"facultades.h"
+	<iostream>
+
+1778079770 c:\users\juana\downloads\proyectop12k26\proyectop12k26\include\facultades.h
+	<string>
+
+1776869662 source:c:\users\juana\downloads\proyectop12k26\proyectop12k26\src\proyecto.cpp
+	"proyecto.h"
+
+1776869662 c:\users\juana\downloads\proyectop12k26\proyectop12k26\include\proyecto.h
+
+1778079770 source:c:\users\juana\downloads\proyectop12k26\proyectop12k26\src\usuarios.cpp
+	"usuarios.h"
+	<fstream>
+	<cstdlib>
+	<conio.h>
+	<iostream>
+	"bitacora.h"
+
+1778079770 c:\users\juana\downloads\proyectop12k26\proyectop12k26\include\usuarios.h
+	<iostream>
+
