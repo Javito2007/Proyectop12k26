@@ -3,8 +3,10 @@
 
 #include <string>
 #include <vector>
+#include "ConfiguracionEvaluacion.h"
 #include "Alumnos.h"
 #include "bitacora.h"
+#include "reportes.h"
 using namespace std;
 
 // Constante que define el máximo de alumnos que se pueden registrar por curso
