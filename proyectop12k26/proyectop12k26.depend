@@ -188,3 +188,87 @@
 	<iostream>
 	"bitacora.h"
 
+1778079149 source:c:\users\bmthb\documents\proyectofinal\proyectop12k26\proyectop12k26\main.cpp
+	<iostream>
+	<fstream>
+	"usuarios.h"
+	"bitacora.h"
+
+1778079149 c:\users\bmthb\documents\proyectofinal\proyectop12k26\proyectop12k26\include\usuarios.h
+	<iostream>
+
+1778079149 c:\users\bmthb\documents\proyectofinal\proyectop12k26\proyectop12k26\include\bitacora.h
+	<iostream>
+
+1778079149 source:c:\users\bmthb\documents\proyectofinal\proyectop12k26\proyectop12k26\src\alumnos.cpp
+	"Alumnos.h"
+	<iostream>
+	<string>
+	<cstdlib>
+	<ctime>
+	<thread>
+	<chrono>
+
+1778079149 c:\users\bmthb\documents\proyectofinal\proyectop12k26\proyectop12k26\include\alumnos.h
+	<string>
+
+1778079149 source:c:\users\bmthb\documents\proyectofinal\proyectop12k26\proyectop12k26\src\bancos.cpp
+	"Bancos.h"
+
+1778079149 c:\users\bmthb\documents\proyectofinal\proyectop12k26\proyectop12k26\include\bancos.h
+	<string>
+
+1778079149 source:c:\users\bmthb\documents\proyectofinal\proyectop12k26\proyectop12k26\src\bitacora.cpp
+	"bitacora.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1778079149 source:c:\users\bmthb\documents\proyectofinal\proyectop12k26\proyectop12k26\src\carrera.cpp
+	"Carrera.h"
+	<iostream>
+	<vector>
+
+1778079149 c:\users\bmthb\documents\proyectofinal\proyectop12k26\proyectop12k26\include\carrera.h
+	<string>
+	<vector>
+
+1778079149 source:c:\users\bmthb\documents\proyectofinal\proyectop12k26\proyectop12k26\src\cursos.cpp
+	"Cursos.h"
+	<string>
+	<vector>
+
+1778079149 c:\users\bmthb\documents\proyectofinal\proyectop12k26\proyectop12k26\include\cursos.h
+	<string>
+	<vector>
+
+1778079149 source:c:\users\bmthb\documents\proyectofinal\proyectop12k26\proyectop12k26\src\facultades.cpp
+	"facultades.h"
+	<iostream>
+
+1778079149 c:\users\bmthb\documents\proyectofinal\proyectop12k26\proyectop12k26\include\facultades.h
+	<string>
+
+1778079149 source:c:\users\bmthb\documents\proyectofinal\proyectop12k26\proyectop12k26\src\inscipcion.cpp
+	<iostream>
+	"inscipcion.h"
+
+1778079149 c:\users\bmthb\documents\proyectofinal\proyectop12k26\proyectop12k26\include\inscipcion.h
+	<string>
+
+1778079149 source:c:\users\bmthb\documents\proyectofinal\proyectop12k26\proyectop12k26\src\proyecto.cpp
+	"proyecto.h"
+
+1778079149 c:\users\bmthb\documents\proyectofinal\proyectop12k26\proyectop12k26\include\proyecto.h
+
+1778079149 source:c:\users\bmthb\documents\proyectofinal\proyectop12k26\proyectop12k26\src\usuarios.cpp
+	"usuarios.h"
+	<fstream>
+	<cstdlib>
+	<conio.h>
+	<iostream>
+	"bitacora.h"
+
