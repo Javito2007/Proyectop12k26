@@ -3,10 +3,19 @@
 using namespace std;
 
 bool SistemaNotas::iniciar() {
+<<<<<<< HEAD
+=======
+    // Intenta iniciar sesión. Si falla, cierra el sistema.
+>>>>>>> 3f9edb6a5ec3ebf7f23ae2a9a2aec885b62bae95
     if (!sesion.loginUsuarios()) {
         cout << "Acceso denegado. Cerrando sistema." << endl;
         return false;
     }
+<<<<<<< HEAD
+=======
+
+    // Guarda el nombre del usuario que inició sesión
+>>>>>>> 3f9edb6a5ec3ebf7f23ae2a9a2aec885b62bae95
     usuarioActivo = sesion.getNombre();
 
     int cantAlumnos;
@@ -14,6 +23,7 @@ bool SistemaNotas::iniciar() {
     cin >> cantAlumnos;
     cin.ignore();
 
+<<<<<<< HEAD
     for (int i = 0; i < cantAlumnos; i++) {
         Alumnos a;
         a.menuRegistro();
@@ -21,11 +31,27 @@ bool SistemaNotas::iniciar() {
         cin.ignore(1000, '\n');
         listaAlumnos.push_back(a);
     }
+=======
+    // Registra la cantidad de alumnos solicitada por el usuario
+    for (int i = 0; i < cantAlumnos; i++) {
+        Alumnos a;
+        a.menuRegistro();           // Muestra el menú de registro de cada alumno
+        cin.clear();
+        cin.ignore(1000, '\n');     // Limpia el buffer de entrada
+        listaAlumnos.push_back(a);  // Agrega el alumno a la lista
+    }
+
+>>>>>>> 3f9edb6a5ec3ebf7f23ae2a9a2aec885b62bae95
     return true;
 }
 
 void SistemaNotas::ejecutarMenu() {
     int opcion;
+<<<<<<< HEAD
+=======
+
+    // Muestra usuario activo
+>>>>>>> 3f9edb6a5ec3ebf7f23ae2a9a2aec885b62bae95
     do {
         cout << "   SISTEMA DE GESTION DE NOTAS"         << endl;
         cout << "   Usuario: " << usuarioActivo           << endl;
@@ -44,13 +70,21 @@ void SistemaNotas::ejecutarMenu() {
         cin >> opcion;
         cin.ignore();
 
+<<<<<<< HEAD
         switch (opcion) {
             case 1:
+=======
+        // Ejecuta la opción seleccionada por el usuario
+        switch (opcion) {
+            case 1:
+                // Configuración del curso y evaluación
+>>>>>>> 3f9edb6a5ec3ebf7f23ae2a9a2aec885b62bae95
                 config = ConfiguracionEvaluacion();
                 config.seleccionarCurso();
                 config.configurarPeriodo();
                 config.almacenarConfiguracion();
                 break;
+<<<<<<< HEAD
             case 2:
                 registro = RegistrarNotas();
                 registro.seleccionarAlumnos(listaAlumnos);
@@ -75,3 +109,59 @@ int main() {
     return 0;
 }
 
+=======
+
+            case 2:
+                // Selección de alumnos para el curso actual
+                registro = RegistrarNotas();
+                registro.seleccionarAlumnos(listaAlumnos);
+                break;
+
+            case 3:
+                registro.ingresarNotas(config);
+                break;
+
+            case 4:
+                registro.almacenarNotas(usuarioActivo);
+                break;
+
+            case 5:
+                reporte.acceder();
+                break;
+
+            case 6:
+                reporte.buscarPorCarnet();
+                break;
+
+            case 7:
+                reporte.actualizar();
+                break;
+
+            case 8:
+                reporte.borrar();
+                break;
+
+            case 9:
+                cout << "\nCerrando sistema. Hasta luego." << endl;
+                break;
+
+            default:
+                cout << "\nOpcion invalida." << endl;
+        }
+    } while (opcion != 9);
+}
+
+int main() {
+    // Crea una instancia del sistema de gestión de notas
+    SistemaNotas sistema;
+
+    // Intenta inicializar el sistema (login + registro de alumnos)
+    if (!sistema.iniciar())
+        return 1;   // Sale del programa si la inicialización falla
+
+    // Ejecuta el menú principal del sistema
+    sistema.ejecutarMenu();
+
+    return 0;   // Finaliza el programa correctamente
+}
+>>>>>>> 3f9edb6a5ec3ebf7f23ae2a9a2aec885b62bae95
