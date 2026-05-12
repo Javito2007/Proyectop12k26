@@ -7,13 +7,14 @@
 	"usuarios.h"
 	"bitacora.h"
 
-1778447887 D
+1778439977 D
 
 1776869130 dc537b6a9e26bca804ea167a026ba36d93c43
 
-1778510005 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\main.cpp
+1778544021 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\main.cpp
 	<iostream>
 	<fstream>
+	"Tesoreria.h"
 	"usuarios.h"
 	"bitacora.h"
 	"menuRegistro.h"
@@ -460,7 +461,7 @@
 	<iostream>
 	<string>
 
-1778439977 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\bancos.cpp
+1778544021 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\bancos.cpp
 	"Bancos.h"
 	"GeneradorConstancias.h"
 	<iostream>
@@ -468,8 +469,9 @@
 	<string>
 	<fstream>
 	<iomanip>
+	<sstream>
 
-1778184652 
+1778512227 
 
 1778212528 source:c:\users\axel\desktop\programacion1\proyectop12k26\proyectop12k26\src\bancos.cpp
 	"Bancos.h"
@@ -1118,37 +1120,249 @@
 	"Carrera.h"
 	"Cursos.h"
 
-1778518196 source:c:\users\javier\downloads\proyectofinal\proyectop12k26\proyectop12k26\src\menu inscripcion .cpp
-	"menu inscripcion .h"
-	"inscipcion.h"
+1778439977 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\asignaciones.cpp
+	"Asignaciones.h"
 	<iostream>
-	<conio.h>
+	<fstream>
+	<string>
+	<vector>
+	<iomanip>
 
-1778518196 c:\users\javier\downloads\proyectofinal\proyectop12k26\proyectop12k26\include\menu inscripcion .h
+1778439977 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\asignaciones.h
+	<vector>
+	<string>
+	"Cursos.h"
 
-1778514708 source:c:\users\javier\downloads\proyectofinal\proyectop12k26\proyectop12k26\src\menuasignaciones.cpp
+1778439977 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\menuasignaciones.cpp
 	"MenuAsignaciones.h"
 	<iostream>
 
-1778514708 source:c:\users\javier\downloads\proyectofinal\proyectop12k26\proyectop12k26\src\menuregistro.cpp
+1778439977 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\menuasignaciones.h
+	"Asignaciones.h"
+
+1778510005 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\menuregistro.cpp
 	"menuRegistro.h"
 	"Alumnos.h"
 	"maestros.h"
 	<iostream>
 	<conio.h>
 
-1778514708 source:c:\users\javier\downloads\proyectofinal\proyectop12k26\proyectop12k26\src\proyecto.cpp
+1778510005 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\menuregistro.h
+
+1778439977 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\tesoreria.cpp
+	"Tesoreria.h"
+	"Bancos.h"
+	"Recepcion.h"
+	"GeneradorConstancias.h"
+	<iostream>
+	<string>
+
+1778439977 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\tesoreria.h
+
+1778544663 source:c:\users\fcast\onedrive\documentos\tercer semestre\programaci�n i\proyectop12k26\proyectop12k26\main.cpp
+	<iostream>
+	<fstream>
+	"Tesoreria.h"
+	"usuarios.h"
+	"bitacora.h"
+	"menuRegistro.h"
+	"MenuAsignaciones.h"
+
+1778512227 c:\users\fcast\onedrive\documentos\tercer semestre\programaci�n i\proyectop12k26\proyectop12k26\include\usuarios.h
+	<iostream>
+
+1778512227 c:\users\fcast\onedrive\documentos\tercer semestre\programaci�n i\proyectop12k26\proyectop12k26\include\bitacora.h
+	<iostream>
+
+1778512227 c:\users\fcast\onedrive\documentos\tercer semestre\programaci�n i\proyectop12k26\proyectop12k26\include\menuregistro.h
+
+1778512227 c:\users\fcast\onedrive\documentos\tercer semestre\programaci�n i\proyectop12k26\proyectop12k26\include\menuasignaciones.h
+	"Asignaciones.h"
+
+1778512227 c:\users\fcast\onedrive\documentos\tercer semestre\programaci�n i\proyectop12k26\proyectop12k26\include\asignaciones.h
+	<vector>
+	<string>
+	"Cursos.h"
+
+1778545662 c:\users\fcast\onedrive\documentos\tercer semestre\programaci�n i\proyectop12k26\proyectop12k26\include\cursos.h
+	<string>
+	<vector>
+
+1778512227 source:c:\users\fcast\onedrive\documentos\tercer semestre\programaci�n i\proyectop12k26\proyectop12k26\src\alumnos.cpp
+	"Alumnos.h"
+	"Carrera.h"
+	<iostream>
+	<fstream>
+	<string>
+	<stdlib.h>
+	<cstdlib>
+	<ctime>
+	<thread>
+	<chrono>
+	<vector>
+	<iomanip>
+	<conio.h>
+
+1778512227 c:\users\fcast\onedrive\documentos\tercer semestre\programaci�n i\proyectop12k26\proyectop12k26\include\alumnos.h
+	<string>
+	<vector>
+
+1778512227 c:\users\fcast\onedrive\documentos\tercer semestre\programaci�n i\proyectop12k26\proyectop12k26\include\carrera.h
+	<iostream>
+	<fstream>
+	<iomanip>
+	<conio.h>
+	<vector>
+
+1778512227 source:c:\users\fcast\onedrive\documentos\tercer semestre\programaci�n i\proyectop12k26\proyectop12k26\src\asignaciones.cpp
+	"Asignaciones.h"
+	<iostream>
+	<fstream>
+	<string>
+	<vector>
+	<iomanip>
+
+1778544663 source:c:\users\fcast\onedrive\documentos\tercer semestre\programaci�n i\proyectop12k26\proyectop12k26\src\bancos.cpp
+	"Bancos.h"
+	"GeneradorConstancias.h"
+	<iostream>
+	<random>
+	<string>
+	<fstream>
+	<iomanip>
+	<sstream>
+
+1778512227 c:\users\fcast\onedrive\documentos\tercer semestre\programaci�n i\proyectop12k26\proyectop12k26\include\bancos.h
+	<string>
+	"GeneradorConstancias.h"
+
+1778512227 c:\users\fcast\onedrive\documentos\tercer semestre\programaci�n i\proyectop12k26\proyectop12k26\include\generadorconstancias.h
+	<iostream>
+	<string>
+
+1778512227 source:c:\users\fcast\onedrive\documentos\tercer semestre\programaci�n i\proyectop12k26\proyectop12k26\src\bitacora.cpp
+	"bitacora.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1778512227 source:c:\users\fcast\onedrive\documentos\tercer semestre\programaci�n i\proyectop12k26\proyectop12k26\src\carrera.cpp
+	"Carrera.h"
+	<stdlib.h>
+	<vector>
+
+1778512227 source:c:\users\fcast\onedrive\documentos\tercer semestre\programaci�n i\proyectop12k26\proyectop12k26\src\cursos.cpp
+	"Cursos.h"
+	<string>
+	<vector>
+	<iostream>
+	<fstream>
+	<iomanip>
+	<conio.h>
+
+1778512227 source:c:\users\fcast\onedrive\documentos\tercer semestre\programaci�n i\proyectop12k26\proyectop12k26\src\facultades.cpp
+	"facultades.h"
+	<iostream>
+
+1778512227 c:\users\fcast\onedrive\documentos\tercer semestre\programaci�n i\proyectop12k26\proyectop12k26\include\facultades.h
+	<string>
+
+1778512227 source:c:\users\fcast\onedrive\documentos\tercer semestre\programaci�n i\proyectop12k26\proyectop12k26\src\generadorconstancias.cpp
+	"GeneradorConstancias.h"
+	<cstdlib>
+	<ctime>
+	<iostream>
+
+1778512227 source:c:\users\fcast\onedrive\documentos\tercer semestre\programaci�n i\proyectop12k26\proyectop12k26\src\inscipcion.cpp
+	<iostream>
+	<fstream>
+	"inscipcion.h"
+
+1778512227 c:\users\fcast\onedrive\documentos\tercer semestre\programaci�n i\proyectop12k26\proyectop12k26\include\inscipcion.h
+	<string>
+
+1778512227 source:c:\users\fcast\onedrive\documentos\tercer semestre\programaci�n i\proyectop12k26\proyectop12k26\src\maestros.cpp
+	"maestros.h"
+	"Carrera.h"
+	"Cursos.h"
+	<iostream>
+	<cstdlib>
+	<vector>
+	<ctime>
+	<fstream>
+	<iomanip>
+	<sstream>
+
+1778512227 c:\users\fcast\onedrive\documentos\tercer semestre\programaci�n i\proyectop12k26\proyectop12k26\include\maestros.h
+	<string>
+	<vector>
+	<fstream>
+	<iomanip>
+	"Carrera.h"
+	"Cursos.h"
+
+1778544021 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\menu inscripcion .cpp
+	"menu inscripcion .h"
+	"inscipcion.h"
+	<iostream>
+	<conio.h>
+
+1778544021 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\menu inscripcion .h
+
+1778544021 3d75c48aded85b14eb3e9559d04024e43353a
+
+1778512227 source:c:\users\fcast\onedrive\documentos\tercer semestre\programaci�n i\proyectop12k26\proyectop12k26\src\menuasignaciones.cpp
+	"MenuAsignaciones.h"
+	<iostream>
+
+1778512227 source:c:\users\fcast\onedrive\documentos\tercer semestre\programaci�n i\proyectop12k26\proyectop12k26\src\menuregistro.cpp
+	"menuRegistro.h"
+	"Alumnos.h"
+	"maestros.h"
+	<iostream>
+	<conio.h>
+
+1778512227 source:c:\users\fcast\onedrive\documentos\tercer semestre\programaci�n i\proyectop12k26\proyectop12k26\src\proyecto.cpp
 	"proyecto.h"
 
-1778514708 c:\users\javier\downloads\proyectofinal\proyectop12k26\proyectop12k26\include\proyecto.h
+1778512227 c:\users\fcast\onedrive\documentos\tercer semestre\programaci�n i\proyectop12k26\proyectop12k26\include\proyecto.h
 
-1778514708 source:c:\users\javier\downloads\proyectofinal\proyectop12k26\proyectop12k26\src\recepcion.cpp
+1778512227 source:c:\users\fcast\onedrive\documentos\tercer semestre\programaci�n i\proyectop12k26\proyectop12k26\src\recepcion.cpp
 	"Recepcion.h"
 	<iostream>
 	<string>
 
-1778514708 c:\users\javier\downloads\proyectofinal\proyectop12k26\proyectop12k26\include\recepcion.h
+1778512227 c:\users\fcast\onedrive\documentos\tercer semestre\programaci�n i\proyectop12k26\proyectop12k26\include\recepcion.h
 	<iostream>
 	<string>
 	"Alumnos.h"
+
+1778512227 source:c:\users\fcast\onedrive\documentos\tercer semestre\programaci�n i\proyectop12k26\proyectop12k26\src\tesoreria.cpp
+	"Tesoreria.h"
+	"Bancos.h"
+	"Recepcion.h"
+	"GeneradorConstancias.h"
+	<iostream>
+	<string>
+
+1778512227 c:\users\fcast\onedrive\documentos\tercer semestre\programaci�n i\proyectop12k26\proyectop12k26\include\tesoreria.h
+
+1778512227 source:c:\users\fcast\onedrive\documentos\tercer semestre\programaci�n i\proyectop12k26\proyectop12k26\src\usuarios.cpp
+	"usuarios.h"
+	<fstream>
+	<cstdlib>
+	<conio.h>
+	<iostream>
+	"bitacora.h"
+
+1778544663 source:c:\users\fcast\onedrive\documentos\tercer semestre\programaci�n i\proyectop12k26\proyectop12k26\src\menu inscripcion .cpp
+	"menu inscripcion .h"
+	"inscipcion.h"
+	<iostream>
+	<conio.h>
+
+1778544663 c:\users\fcast\onedrive\documentos\tercer semestre\programaci�n i\proyectop12k26\proyectop12k26\include\menu inscripcion .h
 
