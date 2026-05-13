@@ -1,0 +1,17 @@
+[13/05/2026 08:33:52] Carnet: 9959-26-1159 | Carrera/Curso: Desarrollo Humano y Profesional | Accion: Asignado (Cod: 001)
+[13/05/2026 08:33:52] Carnet: 9959-26-1159 | Carrera/Curso: Metodologia de la Investigacion | Accion: Asignado (Cod: 002)
+[13/05/2026 08:33:52] Carnet: 9959-26-1159 | Carrera/Curso: Contabilidad I | Accion: Asignado (Cod: 003)
+[13/05/2026 08:33:52] Carnet: 9959-26-1159 | Carrera/Curso: Introduccion a los sistemas de computo | Accion: Asignado (Cod: 004)
+[13/05/2026 08:33:52] Carnet: 9959-26-1159 | Carrera/Curso: Logica de Sistemas | Accion: Asignado (Cod: 005)
+[13/05/2026 08:33:57] Carnet: 1234 | Carrera/Curso: Josue Molina | Accion: 
+[13/05/2026 08:33:57] Carnet: 12345 | Carrera/Curso: Josue Molina | Accion: 
+[13/05/2026 08:33:57] Carnet: 7539 | Carrera/Curso: Wiliam Chacon | Accion: 
+[13/05/2026 08:33:57] Carnet: 5432 | Carrera/Curso: Josue Antonio | Accion: 
+[13/05/2026 08:33:57] Carnet: 5432 | Carrera/Curso: Moises Molina | Accion: 
+[13/05/2026 08:33:57] Carnet: 432234 | Carrera/Curso: Carlos Hernandez | Accion: 
+[13/05/2026 08:33:57] Carnet: 987 | Carrera/Curso: Josue Recancoj | Accion: 
+[13/05/2026 08:33:57] Carnet: 3456 | Carrera/Curso: Marvin Escobar | Accion: 
+[13/05/2026 08:33:57] Carnet: 9876 | Carrera/Curso: Daniel Amado | Accion: 
+[13/05/2026 08:33:57] Carnet: 57483 | Carrera/Curso: Anthony Amado | Accion: 
+[13/05/2026 08:33:57] Carnet: 76543 | Carrera/Curso: josue hermandez  | Accion: 
+[13/05/2026 08:45:25] Carnet: 9959-25-3014 | Carrera/Curso: Introcuccion a los sistemas de computo | Accion: Asignado: (Cod:004)
