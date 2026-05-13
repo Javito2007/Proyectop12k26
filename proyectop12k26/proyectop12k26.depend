@@ -295,21 +295,21 @@
 1778112504 c:\users\moise\documents\proyectop12k26\proyectop12k26\include\bitacora.h
 	<iostream>
 
-1778023245 source:c:\users\moise\documents\proyectop12k26\proyectop12k26\src\carrera.cpp
+1778642880 source:c:\users\moise\documents\proyectop12k26\proyectop12k26\src\carrera.cpp
 	"Carrera.h"
 	<iostream>
 	<vector>
 
-1778023245 c:\users\moise\documents\proyectop12k26\proyectop12k26\include\carrera.h
+1778642880 c:\users\moise\documents\proyectop12k26\proyectop12k26\include\carrera.h
 	<string>
 	<vector>
 
-1778023245 source:c:\users\moise\documents\proyectop12k26\proyectop12k26\src\cursos.cpp
+1778642880 source:c:\users\moise\documents\proyectop12k26\proyectop12k26\src\cursos.cpp
 	"Cursos.h"
 	<string>
 	<vector>
 
-1778023245 c:\users\moise\documents\proyectop12k26\proyectop12k26\include\cursos.h
+1778642880 c:\users\moise\documents\proyectop12k26\proyectop12k26\include\cursos.h
 	<string>
 	<vector>
 
@@ -336,7 +336,7 @@
 1778112504 c:\users\moise\documents\proyectop12k26\proyectop12k26\include\usuarios.h
 	<iostream>
 
-1778431581 source:c:\users\moise\documents\proyectop12k26\proyectop12k26\main.cpp
+1778642880 source:c:\users\moise\documents\proyectop12k26\proyectop12k26\main.cpp
 	<iostream>
 	<fstream>
 	"usuarios.h"
@@ -346,23 +346,24 @@
 	"GeneradorConstancias.h"
 	"Alumnos.h"
 
-1778431581 c:\users\moise\documents\proyectop12k26\proyectop12k26\include\bancos.h
+1778642946 c:\users\moise\documents\proyectop12k26\proyectop12k26\include\bancos.h
 	<string>
+	"GeneradorConstancias.h"
 
 1778431581 c:\users\moise\documents\proyectop12k26\proyectop12k26\include\recepcion.h
 	<iostream>
 	<string>
 	"Alumnos.h"
 
-1778431581 c:\users\moise\documents\proyectop12k26\proyectop12k26\include\alumnos.h
+1778642880 c:\users\moise\documents\proyectop12k26\proyectop12k26\include\alumnos.h
 	<string>
 	<vector>
 
-1778431581 c:\users\moise\documents\proyectop12k26\proyectop12k26\include\generadorconstancias.h
+1778642880 c:\users\moise\documents\proyectop12k26\proyectop12k26\include\generadorconstancias.h
 	<iostream>
 	<string>
 
-1778431581 source:c:\users\moise\documents\proyectop12k26\proyectop12k26\src\alumnos.cpp
+1778642880 source:c:\users\moise\documents\proyectop12k26\proyectop12k26\src\alumnos.cpp
 	"Alumnos.h"
 	"Carrera.h"
 	<iostream>
@@ -377,15 +378,15 @@
 	<iomanip>
 	<conio.h>
 
-1778431581 source:c:\users\moise\documents\proyectop12k26\proyectop12k26\src\generadorconstancias.cpp
+1778642880 source:c:\users\moise\documents\proyectop12k26\proyectop12k26\src\generadorconstancias.cpp
 	"GeneradorConstancias.h"
 	<cstdlib>
 	<ctime>
 
-1778431581 source:c:\users\moise\documents\proyectop12k26\proyectop12k26\src\horarios.cpp
+1778642880 source:c:\users\moise\documents\proyectop12k26\proyectop12k26\src\horarios.cpp
 	"Horarios.h"
 
-1778431581 c:\users\moise\documents\proyectop12k26\proyectop12k26\include\horarios.h
+1778642880 c:\users\moise\documents\proyectop12k26\proyectop12k26\include\horarios.h
 	<iostream>
 	<vector>
 	<string>
