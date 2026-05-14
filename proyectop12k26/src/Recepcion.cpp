@@ -208,7 +208,7 @@ void Recepcion::insertarpagosAlumnos()
 	cin>>carnet;
 	cout<<"Ingresa el Monto Pagado: ";
 	cin>>monto;
-	file.open("Usuarios.txt", ios::app | ios::out);
+	file.open("Recepcion.txt", ios::app | ios::out);
 	file <<std::left<<std::setw(15)<< name <<std::left<<std::setw(15)<< carnet << std::left<<std::setw(15)<< monto<< "\n";
 	file.close();
 }
@@ -218,7 +218,7 @@ void Recepcion::desplegarpagosAlumnos()
 	fstream file;
 	int total=0;
 	cout<<"----- Tabla de Detalles del Estudiante -----"<<endl;
-	file.open("Usuarios.txt",ios::in);
+	file.open("Recepcion.txt",ios::in);
 	if(!file)
 	{
 		cout<<"No se encontro informacion";
@@ -249,7 +249,7 @@ void Recepcion::modificarpagosAlumnos()
 	string participant_carnet;
 	int found=0;
 	cout<<"-----Modificacion Detalles del Estudiante-----"<<endl;
-	file.open("Usuarios.txt",ios::in);
+	file.open("Recepcion.txt",ios::in);
 	if(!file)
 	{
 		cout<<"No hay informacion..,";
@@ -283,7 +283,7 @@ void Recepcion::modificarpagosAlumnos()
 		}
 		file1.close();
 		file.close();
-		remove("Usuarios.txt");
+		remove("Recepcion.txt");
 		rename("Record.txt","Usuarios.txt");
 	}
 }
@@ -292,7 +292,7 @@ void Recepcion::buscarpagosAlumnos()
 	system("cls");
 	fstream file;
 	int found=0;
-	file.open("Usuarios.txt",ios::in);
+	file.open("Recepcion.txt",ios::in);
 	if(!file)
 	{
 		cout<<"-----Datos del Estudiante-----"<<endl;
@@ -331,7 +331,7 @@ void Recepcion::borrarpagosAlumnos()
 	string participant_carnet;
 	int found=0;
 	cout<<"-----Detalles del Estudiante a Borrar-----"<<endl;
-	file.open("Usuarios.txt",ios::in);
+	file.open("Recepcion.txt",ios::in);
 	if(!file)
 	{
 		cout<<"No hay informacion...";
@@ -362,7 +362,7 @@ void Recepcion::borrarpagosAlumnos()
 		}
 		file1.close();
 		file.close();
-		remove("Usuarios.txt");
+		remove("Recepcion.txt");
 		rename("Record.txt","Usuarios.txt");
 	}
 }
@@ -377,7 +377,7 @@ void Recepcion::insertarpagosDocentes()
 	cin>>codigo;
 	cout<<"Ingresa el Monto Pagado: ";
 	cin>>monto;
-	file.open("Usuarios.txt", ios::app | ios::out);
+	file.open("Recepcion.txt", ios::app | ios::out);
 	file <<std::left<<std::setw(15)<< name <<std::left<<std::setw(15)<< codigo << std::left<<std::setw(15)<< monto<< "\n";
 	file.close();
 }
@@ -387,7 +387,7 @@ void Recepcion::desplegarpagosDocentes()
 	fstream file;
 	int total=0;
 	cout<<"----- Tabla de Detalles del Docente -----"<<endl;
-	file.open("Usuarios.txt",ios::in);
+	file.open("Recepcion.txt",ios::in);
 	if(!file)
 	{
 		cout<<"No se encontro informacion";
@@ -418,7 +418,7 @@ void Recepcion::modificarpagosDocentes()
 	string participant_codigo;
 	int found=0;
 	cout<<"-----Modificacion Detalles del Docente-----"<<endl;
-	file.open("Usuarios.txt",ios::in);
+	file.open("Recepcion.txt",ios::in);
 	if(!file)
 	{
 		cout<<"No hay informacion..,";
@@ -452,7 +452,7 @@ void Recepcion::modificarpagosDocentes()
 		}
 		file1.close();
 		file.close();
-		remove("Usuarios.txt");
+		remove("Recepcion.txt");
 		rename("Record.txt","Usuarios.txt");
 	}
 }
@@ -461,7 +461,7 @@ void Recepcion::buscarpagosDocentes()
 	system("cls");
 	fstream file;
 	int found=0;
-	file.open("Usuarios.txt",ios::in);
+	file.open("Recepcion.txt",ios::in);
 	if(!file)
 	{
 		cout<<"-----Datos del Docente-----"<<endl;
@@ -500,7 +500,7 @@ void Recepcion::borrarpagosDocentes()
 	string participant_codigo;
 	int found=0;
 	cout<<"-----Detalles del Docente a Borrar-----"<<endl;
-	file.open("Usuarios.txt",ios::in);
+	file.open("Recepcion.txt",ios::in);
 	if(!file)
 	{
 		cout<<"No hay informacion...";
@@ -531,7 +531,7 @@ void Recepcion::borrarpagosDocentes()
 		}
 		file1.close();
 		file.close();
-		remove("Usuarios.txt");
+		remove("Recepcion.txt");
 		rename("Record.txt","Usuarios.txt");
 	}
 }
