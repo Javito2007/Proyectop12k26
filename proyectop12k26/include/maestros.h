@@ -7,7 +7,7 @@
 #include <iomanip>
 #include "Carrera.h"
 #include "Cursos.h"
-
+// Funcionamineto completo Creado por Abner Muñoz 9959-25-13959
 using namespace std;
 
 class Maestros {
