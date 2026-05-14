@@ -55,6 +55,7 @@
 		<Unit filename="include/proyecto.h" />
 		<Unit filename="include/reportes.h" />
 		<Unit filename="include/usuarios.h" />
+		<Unit filename="include/validacionpagos0.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Alumnos.cpp" />
 		<Unit filename="src/Asignaciones.cpp" />
@@ -77,6 +78,7 @@
 		<Unit filename="src/proyecto.cpp" />
 		<Unit filename="src/reportes.cpp" />
 		<Unit filename="src/usuarios.cpp" />
+		<Unit filename="src/validacionpagos0.cpp" />
 		<Extensions />
 	</Project>
 </CodeBlocks_project_file>
