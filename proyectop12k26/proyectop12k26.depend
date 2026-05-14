@@ -2320,7 +2320,7 @@
 	<iomanip>
 	<sstream>
 
-1778470036 c:\users\gmg\onedrive\escritorio\tercer semestre\programacion\laboratorios\proyectop12k26\proyectop12k26\proyectop12k26\proyectop12k26\include\bancos.h
+1778685716 c:\users\gmg\onedrive\escritorio\tercer semestre\programacion\laboratorios\proyectop12k26\proyectop12k26\proyectop12k26\proyectop12k26\include\bancos.h
 	<string>
 	"GeneradorConstancias.h"
 
@@ -2387,12 +2387,14 @@
 
 1778681195 c:\users\gmg\onedrive\escritorio\tercer semestre\programacion\laboratorios\proyectop12k26\proyectop12k26\proyectop12k26\proyectop12k26\include\menu inscripcion .h
 
-1778470036 source:c:\users\gmg\onedrive\escritorio\tercer semestre\programacion\laboratorios\proyectop12k26\proyectop12k26\proyectop12k26\proyectop12k26\src\menuasignaciones.cpp
+1778685716 source:c:\users\gmg\onedrive\escritorio\tercer semestre\programacion\laboratorios\proyectop12k26\proyectop12k26\proyectop12k26\proyectop12k26\src\menuasignaciones.cpp
 	"MenuAsignaciones.h"
+	"ModuloPagos.h"
 	<iostream>
 
-1778681196 source:c:\users\gmg\onedrive\escritorio\tercer semestre\programacion\laboratorios\proyectop12k26\proyectop12k26\proyectop12k26\proyectop12k26\src\menuregistro.cpp
+1778687259 source:c:\users\gmg\onedrive\escritorio\tercer semestre\programacion\laboratorios\proyectop12k26\proyectop12k26\proyectop12k26\proyectop12k26\src\menuregistro.cpp
 	"menuRegistro.h"
+	"menu inscripcion .h"
 	"Alumnos.h"
 	"maestros.h"
 	<iostream>
