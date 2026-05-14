@@ -9,7 +9,7 @@
 #include <iomanip>
 #include <sstream>
 using namespace std;
-
+// FUncionamiento completo
 Maestros::Maestros()
 {
     id = "";
