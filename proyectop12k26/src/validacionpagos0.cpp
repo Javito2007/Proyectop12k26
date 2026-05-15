@@ -145,24 +145,24 @@ void validacionpagos0::tipodePago(int Tipotarjeta, long long &numeroTarjeta, std
         cout<<"Ingrese el Mes que va a pagar: "<<endl;
         cin >>mesColegiatura;
 
-        cout <<"para pagar con tu tarjeta de debito ingresa lo siguiente:" << endl;
-        cout <<"Ingresa el numero de Tarjeta: " << endl;
+        cout <<"Para pagar con tu tarjeta de debito ingresa lo siguiente:" << endl;
+        cout <<"-->Ingresa el numero de Tarjeta: " << endl;
         cin >> numeroTarjeta;
-        cout <<"Ingresa tu nombre COMO ESTA EN LA TARJETA: " << endl;
+        cout <<"-->Ingresa tu nombre COMO ESTA EN LA TARJETA: " << endl;
         cin.ignore();
         getline(cin, nombre);
 
         for(int i = 0; i < nombre.length(); i++) {
             if(nombre[i] == ' ') nombre[i] = '_';}
 
-        cout <<"Fecha de vencimiento: " << endl;
+        cout <<"-->Fecha de vencimiento: " << endl;
         getline(cin, fecha);
-        cout <<"Ingresa el codigo de seguridad: " << endl;
+        cout <<"-->Ingresa el codigo de seguridad: " << endl;
         cin >> codigoSeguridad;
-        cout <<"Tu tarjeta ha sido confirmada" << endl;
+        cout <<"--Tu tarjeta ha sido confirmada--" << endl;
 
-        cout<<"Total a pagar: Q"<< resultado<<endl;
-        cout << "Ingrese el monto: "<< endl;
+        cout<<"-->Total a pagar: Q"<< resultado<<endl;
+        cout << "-->Ingrese el monto: "<< endl;
         cin >> pagoalumno;
         pagoAlumno1(pagoalumno, resultado);
 
@@ -171,14 +171,14 @@ void validacionpagos0::tipodePago(int Tipotarjeta, long long &numeroTarjeta, std
         if(file.is_open()){
         file << left << setw(20) << numeroTarjeta << left << setw(20) << nombre << left << setw(15) << mesColegiatura <<left << setw(15)<< pagoalumno << endl;
         file.close();
-        cout << "Pago de "<< mesColegiatura<<" guardado correctamente" << endl;
+        cout << "----Pago de "<< mesColegiatura<<" guardado correctamente----" << endl;
 
     }
     cout<<"¿Deseas realizar otro pago? (s/n); ";
     cin>>continuar;
     }while (continuar=='s'||continuar=='S');
 
-cout <<"Proceso de pagos finalizado."<<endl;
+cout <<"**Proceso de pagos finalizado.**"<<endl;
 }
 
 
