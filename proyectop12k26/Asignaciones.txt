@@ -11,3 +11,11 @@ CODIGO          | NOMBRE DEL CURSO
 004             | Introduccion a los sistemas de computo
 005             | Logica de Sistemas
 ==========================================================
+ID:9959-26-1159
+REGISTRO DE ASIGNACION - CARNET: 9959-26-1159
+----------------------------------------------------------
+002        | Metodologia de la Investigacion     | Q204.00
+003        | Contabilidad I                      | Q204.00
+004        | Introduccion a los sistemas de computo | Q204.00
+005        | Logica de Sistemas                  | Q204.00
+==========================================================
