@@ -77,8 +77,8 @@ void menuGeneral()
             break;
 
         case 3:
-            cout << "Aqui se colocara el modulo de notas" << endl;
-            cin.get();
+            SistemaNotas notas;
+            notas.ejecutarMenu();
             break;
 
         case 4:
