@@ -109,9 +109,10 @@ void Asignacion::menuAsignacion() {
                 cout << "   Que ciclo desea consultar? (1-10): ";
                 cin >> ciclo;
 
-                // Cada ciclo tiene 5 cursos segun el vector de Cursos.cpp
+                // Cada ciclo tiene exactamente 5 cursos segun Cursos.cpp
                 int inicio = (ciclo - 1) * 5;
                 int fin = inicio + 5;
+                int cursosDisponiblesEnCiclo = 5;
 
                 if (inicio >= 0 && inicio < (int)catalogo.size()) {
                     cout << "\n   --- CURSOS DISPONIBLES (CICLO " << ciclo << ") ---" << endl;
@@ -121,20 +122,27 @@ void Asignacion::menuAsignacion() {
                     for (int i = inicio; i < fin && i < (int)catalogo.size(); i++) {
                         cout << "   " << left << setw(7) << catalogo[i].getcodigoCurso()
                              << " | " << setw(35) << catalogo[i].getnombreCurso()
-                             << " | " << catalogo[i].getpreRequisitoDeCurso() << endl;
+                             << " | " << catalogo[i].getpreRequisitoDeCurso() << endl; // Usando getter de pre-requisito
                     }
 
                     int numCursos;
-                    cout << "\n   Cuantos cursos desea asignar? ";
+                    cout << "\n   Cuantos cursos desea asignar? (Maximo " << cursosDisponiblesEnCiclo << "): ";
                     cin >> numCursos;
-                    vector<string> seleccionados;
 
+                    // VALIDACION 1: No dejar que pida mas cursos de los que tiene el ciclo
+                    while (numCursos < 1 || numCursos > cursosDisponiblesEnCiclo) {
+                        cout << "   [!] Cantidad invalida. Ingrese un numero entre 1 y " << cursosDisponiblesEnCiclo << ": ";
+                        cin >> numCursos;
+                    }
+
+                    vector<string> seleccionados;
                     for (int i = 0; i < numCursos; i++) {
                         string cod;
                         cout << "   Codigo curso " << i+1 << ": ";
                         cin >> cod;
 
-                        bool encontrado = false;
+                        bool encontradoEnCiclo = false;
+                        // VALIDACION 2: Solo buscar dentro del rango del ciclo (inicio a fin)
                         for (int j = inicio; j < fin && j < (int)catalogo.size(); j++) {
                             if (catalogo[j].getcodigoCurso() == cod) {
                                 // Valido si tiene requisito
@@ -144,22 +152,23 @@ void Asignacion::menuAsignacion() {
                                     cin >> resp;
                                     if (resp == 'n' || resp == 'N') {
                                         cout << "   [!] No se puede asignar este curso por falta de requisito." << endl;
-                                        encontrado = true; // para que no pida codigo de nuevo, pero no lo agrega
+                                        encontradoEnCiclo = true;
                                         break;
                                     }
                                 }
                                 seleccionados.push_back(catalogo[j].getnombreCurso());
-                                encontrado = true;
+                                encontradoEnCiclo = true;
                                 break;
                             }
                         }
-                        if (!encontrado) {
-                            cout << "   [!] Codigo no valido para este ciclo." << endl;
-                            i--;
+
+                        if (!encontradoEnCiclo) {
+                            cout << "   [!] El codigo " << cod << " no pertenece al Ciclo " << ciclo << "." << endl;
+                            i--; // Repetir este turno para que el conteo de cursos sea correcto
                         }
                     }
 
-                    // Escribo al archivo manteniendo el formato original para no fregar a los demas
+                    // Escribo al archivo manteniendo el formato original
                     if (!seleccionados.empty()) {
                         ofstream archivoSalida("Asignaciones.txt", ios::app);
                         if (archivoSalida.is_open()) {
