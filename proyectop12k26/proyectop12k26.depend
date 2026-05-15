@@ -2936,3 +2936,16 @@
 	<iomanip>
 	<sstream>
 
+1778821627 source:c:\users\javier\downloads\proyectofinal\proyectop12k26\proyectop12k26\src\menunotas.cpp
+	"menuNotas.h"
+	<iostream>
+
+1778821627 c:\users\javier\downloads\proyectofinal\proyectop12k26\proyectop12k26\include\menunotas.h
+	<vector>
+	<string>
+	"usuarios.h"
+	"Alumnos.h"
+	"ConfiguracionEvaluacion.h"
+	"RegistrarNotas.h"
+	"reportes.h"
+

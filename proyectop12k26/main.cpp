@@ -6,6 +6,8 @@
 #include "bitacora.h"
 #include "menuRegistro.h"
 #include "MenuAsignaciones.h"
+#include "menuNotas.h"
+
 
 using namespace std;
 
@@ -77,10 +79,11 @@ void menuGeneral()
             break;
 
         case 3:
-            SistemaNotas notas;
-            notas.ejecutarMenu();
+            {
+            SistemaNotas menuNotas;
+            menuNotas.ejecutarMenu();
             break;
-
+            }
         case 4:
             {
             Tesoreria tesoreria;
