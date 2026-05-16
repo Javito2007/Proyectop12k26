@@ -9,10 +9,11 @@ struct RegistroBitacora {
     std::string accion;
 };
 
-// Funciones de gestión y procesamiento
+// Funciones de control y procesamiento
 void menuRespaldo();
 bool respaldarAsignaciones();
 bool respaldarCobroTarjeta();
+bool respaldarHorarios(); // <-- Nueva firma añadida
 void mostrarRespaldo();
 void crearRegistroManual();
 void eliminarRegistroPorCarnet();
