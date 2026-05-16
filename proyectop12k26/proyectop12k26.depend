@@ -320,7 +320,7 @@
 	<iostream>
 	"bitacora.h"
 
-1778684501 D
+1778820377 D
 
 1778122531 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\bitacora.cpp
 
@@ -2575,11 +2575,159 @@
 	<iostream>
 	<conio.h>
 
-<<<<<<< HEAD
-1778685513  c:\users\axel\desktop\programacion1\proyectop12k26\proyectop12k26\include\menu inscripcion .h
-=======
 1778685513 c:\users\axel\desktop\programacion1\proyectop12k26\proyectop12k26\include\menu inscripcion .h
->>>>>>> d25c0582f618ea033219d08996f741edd7f2c275
+
+1778821627 c0582f618ea033219d08996f741edd7f2c275
+	<iostream>
+	<fstream>
+	"Tesoreria.h"
+	"usuarios.h"
+	"bitacora.h"
+	"menuRegistro.h"
+	"MenuAsignaciones.h"
+	<vector>
+	<string>
+	"Cursos.h"
+	"Alumnos.h"
+	"Carrera.h"
+	<iostream>
+	<fstream>
+	<string>
+	<stdlib.h>
+	<cstdlib>
+	<ctime>
+	<thread>
+	<chrono>
+	<vector>
+	<iomanip>
+	<conio.h>
+	<iostream>
+	<fstream>
+	<iomanip>
+	<conio.h>
+	<vector>
+	"Asignaciones.h"
+	<iostream>
+	<fstream>
+	<string>
+	<vector>
+	<iomanip>
+	"Bancos.h"
+	"GeneradorConstancias.h"
+	<iostream>
+	<random>
+	<string>
+	<fstream>
+	<iomanip>
+	<sstream>
+	<iostream>
+	<string>
+	<fstream>
+	"bitacora.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	"Carrera.h"
+	<stdlib.h>
+	<vector>
+	<string>
+	<vector>
+	"Cursos.h"
+	"Cursos.h"
+	<string>
+	<vector>
+	<iostream>
+	<fstream>
+	<iomanip>
+	<conio.h>
+	"GeneradorConstancias.h"
+	<cstdlib>
+	<ctime>
+	<iostream>
+	<fstream>
+	<iostream>
+	<vector>
+	<string>
+	<fstream>
+	"Cursos.h"
+	"Asignaciones.h"
+	"GeneradorConstancias.h"
+	"maestros.h"
+	"Carrera.h"
+	"Cursos.h"
+	<iostream>
+	<cstdlib>
+	<vector>
+	<ctime>
+	<fstream>
+	<iomanip>
+	<sstream>
+	<string>
+	<vector>
+	<fstream>
+	<iomanip>
+	"Carrera.h"
+	"Cursos.h"
+	"menu inscripcion .h"
+	"inscipcion.h"
+	<iostream>
+	<conio.h>
+	"MenuAsignaciones.h"
+	"ModuloPagos.h"
+	"Horarios.h"
+	"modulomenurespaldo.h"
+	<iostream>
+	"menuRegistro.h"
+	"menu inscripcion .h"
+	"Alumnos.h"
+	"maestros.h"
+	<iostream>
+	<conio.h>
+	"Recepcion.h"
+	<iostream>
+	<string>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	<iostream>
+	<string>
+	"Alumnos.h"
+	"Maestros.h"
+	<string>
+	<vector>
+	"ConfiguracionEvaluacion.h"
+	"Alumnos.h"
+	"bitacora.h"
+	"reportes.h"
+	<iostream>
+	<fstream>
+	<sstream>
+	<iomanip>
+	<cstdio>
+	"reportes.h"
+	"Tesoreria.h"
+	"Bancos.h"
+	"Recepcion.h"
+	"GeneradorConstancias.h"
+	<iostream>
+	<string>
+	"usuarios.h"
+	<fstream>
+	<cstdlib>
+	<conio.h>
+	<iostream>
+	"bitacora.h"
+	"validacionpagos0.h"
+	<string>
+	<iostream>
+	<fstream>
+	<iomanip>
+	<sstream>
 
 1778685513 source:c:\users\axel\desktop\programacion1\proyectop12k26\proyectop12k26\src\registrarnotas.cpp
 	<iostream>
@@ -2632,9 +2780,16 @@
 	<iostream>
 	<string>
 
-<<<<<<< HEAD
-1778735407 source:c:\users\bmthb\documents\proyectofinal\proyectop12k26\proyectop12k26\main.cpp
-=======
+1778856214 source:c:\users\bmthb\documents\proyectofinal\proyectop12k26\proyectop12k26\main.cpp
+	<iostream>
+	<fstream>
+	"Tesoreria.h"
+	"usuarios.h"
+	"bitacora.h"
+	"menuRegistro.h"
+	"MenuAsignaciones.h"
+	"menuNotas.h"
+
 1778544021 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\modulopagos.h
 	"validacionpagos0.h"
 
@@ -2653,16 +2808,7 @@
 	<sstream>
 
 1778820377 source:c:\users\javier\downloads\proyectofinal\proyectop12k26\proyectop12k26\main.cpp
->>>>>>> d25c0582f618ea033219d08996f741edd7f2c275
-	<iostream>
-	<fstream>
-	"Tesoreria.h"
-	"usuarios.h"
-	"bitacora.h"
-	"menuRegistro.h"
-	"MenuAsignaciones.h"
 
-<<<<<<< HEAD
 1778735407 c:\users\bmthb\documents\proyectofinal\proyectop12k26\proyectop12k26\include\tesoreria.h
 
 1778735407 c:\users\bmthb\documents\proyectofinal\proyectop12k26\proyectop12k26\include\usuarios.h
@@ -2677,7 +2823,7 @@
 	"Asignaciones.h"
 
 1778735407 c:\users\bmthb\documents\proyectofinal\proyectop12k26\proyectop12k26\include\asignaciones.h
-=======
+
 1778820377 c:\users\javier\downloads\proyectofinal\proyectop12k26\proyectop12k26\include\tesoreria.h
 
 1778820377 c:\users\javier\downloads\proyectofinal\proyectop12k26\proyectop12k26\include\usuarios.h
@@ -2692,153 +2838,75 @@
 	"Asignaciones.h"
 
 1778820377 c:\users\javier\downloads\proyectofinal\proyectop12k26\proyectop12k26\include\asignaciones.h
->>>>>>> d25c0582f618ea033219d08996f741edd7f2c275
-	<vector>
-	<string>
-	"Cursos.h"
 
-<<<<<<< HEAD
 1778735407 c:\users\bmthb\documents\proyectofinal\proyectop12k26\proyectop12k26\include\cursos.h
 	<string>
 	<vector>
 
 1778735407 source:c:\users\bmthb\documents\proyectofinal\proyectop12k26\proyectop12k26\src\alumnos.cpp
-=======
+
 1778820377 c:\users\javier\downloads\proyectofinal\proyectop12k26\proyectop12k26\include\cursos.h
 	<string>
 	<vector>
 
 1778820377 source:c:\users\javier\downloads\proyectofinal\proyectop12k26\proyectop12k26\src\alumnos.cpp
->>>>>>> d25c0582f618ea033219d08996f741edd7f2c275
-	"Alumnos.h"
-	"Carrera.h"
-	<iostream>
-	<fstream>
-	<string>
-	<stdlib.h>
-	<cstdlib>
-	<ctime>
-	<thread>
-	<chrono>
-	<vector>
-	<iomanip>
-	<conio.h>
 
-<<<<<<< HEAD
 1778735407 c:\users\bmthb\documents\proyectofinal\proyectop12k26\proyectop12k26\include\alumnos.h
 	<string>
 	<vector>
 
 1778735407 c:\users\bmthb\documents\proyectofinal\proyectop12k26\proyectop12k26\include\carrera.h
-=======
+
 1778820377 c:\users\javier\downloads\proyectofinal\proyectop12k26\proyectop12k26\include\alumnos.h
 	<string>
 	<vector>
 
 1778820377 c:\users\javier\downloads\proyectofinal\proyectop12k26\proyectop12k26\include\carrera.h
->>>>>>> d25c0582f618ea033219d08996f741edd7f2c275
-	<iostream>
-	<fstream>
-	<iomanip>
-	<conio.h>
-	<vector>
 
-<<<<<<< HEAD
 1778735407 source:c:\users\bmthb\documents\proyectofinal\proyectop12k26\proyectop12k26\src\asignaciones.cpp
-=======
+
 1778820377 source:c:\users\javier\downloads\proyectofinal\proyectop12k26\proyectop12k26\src\asignaciones.cpp
->>>>>>> d25c0582f618ea033219d08996f741edd7f2c275
-	"Asignaciones.h"
-	<iostream>
-	<fstream>
-	<string>
-	<vector>
-	<iomanip>
 
-<<<<<<< HEAD
 1778735407 source:c:\users\bmthb\documents\proyectofinal\proyectop12k26\proyectop12k26\src\bancos.cpp
-=======
-1778820377 source:c:\users\javier\downloads\proyectofinal\proyectop12k26\proyectop12k26\src\bancos.cpp
->>>>>>> d25c0582f618ea033219d08996f741edd7f2c275
-	"Bancos.h"
-	"GeneradorConstancias.h"
-	<iostream>
-	<random>
-	<string>
-	<fstream>
-	<iomanip>
-	<sstream>
 
-<<<<<<< HEAD
+1778820377 source:c:\users\javier\downloads\proyectofinal\proyectop12k26\proyectop12k26\src\bancos.cpp
+
 1778735407 c:\users\bmthb\documents\proyectofinal\proyectop12k26\proyectop12k26\include\bancos.h
 	<string>
 	"GeneradorConstancias.h"
 
 1778735407 c:\users\bmthb\documents\proyectofinal\proyectop12k26\proyectop12k26\include\generadorconstancias.h
-=======
+
 1778820377 c:\users\javier\downloads\proyectofinal\proyectop12k26\proyectop12k26\include\bancos.h
 	<string>
 	"GeneradorConstancias.h"
 
 1778820377 c:\users\javier\downloads\proyectofinal\proyectop12k26\proyectop12k26\include\generadorconstancias.h
->>>>>>> d25c0582f618ea033219d08996f741edd7f2c275
-	<iostream>
-	<string>
-	<fstream>
 
-<<<<<<< HEAD
 1778735407 source:c:\users\bmthb\documents\proyectofinal\proyectop12k26\proyectop12k26\src\bitacora.cpp
-=======
+
 1778820377 source:c:\users\javier\downloads\proyectofinal\proyectop12k26\proyectop12k26\src\bitacora.cpp
->>>>>>> d25c0582f618ea033219d08996f741edd7f2c275
-	"bitacora.h"
-	<iostream>
-	<fstream>
-	<stdlib.h>
-	<cstdlib>
-	<conio.h>
-	<iomanip>
 
-<<<<<<< HEAD
 1778735407 source:c:\users\bmthb\documents\proyectofinal\proyectop12k26\proyectop12k26\src\carrera.cpp
-=======
-1778820377 source:c:\users\javier\downloads\proyectofinal\proyectop12k26\proyectop12k26\src\carrera.cpp
->>>>>>> d25c0582f618ea033219d08996f741edd7f2c275
-	"Carrera.h"
-	<stdlib.h>
-	<vector>
 
-<<<<<<< HEAD
+1778820377 source:c:\users\javier\downloads\proyectofinal\proyectop12k26\proyectop12k26\src\carrera.cpp
+
 1778735407 source:c:\users\bmthb\documents\proyectofinal\proyectop12k26\proyectop12k26\src\configuracionevaluacion.cpp
 	<iostream>
 	"ConfiguracionEvaluacion.h"
 
 1778735407 c:\users\bmthb\documents\proyectofinal\proyectop12k26\proyectop12k26\include\configuracionevaluacion.h
-=======
+
 1778820377 source:c:\users\javier\downloads\proyectofinal\proyectop12k26\proyectop12k26\src\configuracionevaluacion.cpp
 	<iostream>
 	"ConfiguracionEvaluacion.h"
 
 1778820377 c:\users\javier\downloads\proyectofinal\proyectop12k26\proyectop12k26\include\configuracionevaluacion.h
->>>>>>> d25c0582f618ea033219d08996f741edd7f2c275
-	<string>
-	<vector>
-	"Cursos.h"
 
-<<<<<<< HEAD
 1778735407 source:c:\users\bmthb\documents\proyectofinal\proyectop12k26\proyectop12k26\src\cursos.cpp
-=======
-1778820377 source:c:\users\javier\downloads\proyectofinal\proyectop12k26\proyectop12k26\src\cursos.cpp
->>>>>>> d25c0582f618ea033219d08996f741edd7f2c275
-	"Cursos.h"
-	<string>
-	<vector>
-	<iostream>
-	<fstream>
-	<iomanip>
-	<conio.h>
 
-<<<<<<< HEAD
+1778820377 source:c:\users\javier\downloads\proyectofinal\proyectop12k26\proyectop12k26\src\cursos.cpp
+
 1778735407 source:c:\users\bmthb\documents\proyectofinal\proyectop12k26\proyectop12k26\src\facultades.cpp
 	"facultades.h"
 	<iostream>
@@ -2847,7 +2915,7 @@
 	<string>
 
 1778735407 source:c:\users\bmthb\documents\proyectofinal\proyectop12k26\proyectop12k26\src\generadorconstancias.cpp
-=======
+
 1778820377 source:c:\users\javier\downloads\proyectofinal\proyectop12k26\proyectop12k26\src\facultades.cpp
 	"facultades.h"
 	<iostream>
@@ -2856,43 +2924,38 @@
 	<string>
 
 1778820377 source:c:\users\javier\downloads\proyectofinal\proyectop12k26\proyectop12k26\src\generadorconstancias.cpp
->>>>>>> d25c0582f618ea033219d08996f741edd7f2c275
-	"GeneradorConstancias.h"
-	<cstdlib>
-	<ctime>
-	<iostream>
-	<fstream>
 
-<<<<<<< HEAD
 1778735407 source:c:\users\bmthb\documents\proyectofinal\proyectop12k26\proyectop12k26\src\horarios.cpp
 	"Horarios.h"
 
 1778735407 c:\users\bmthb\documents\proyectofinal\proyectop12k26\proyectop12k26\include\horarios.h
-=======
+
 1778820377 source:c:\users\javier\downloads\proyectofinal\proyectop12k26\proyectop12k26\src\horarios.cpp
 	"Horarios.h"
 
 1778820377 c:\users\javier\downloads\proyectofinal\proyectop12k26\proyectop12k26\include\horarios.h
->>>>>>> d25c0582f618ea033219d08996f741edd7f2c275
-	<iostream>
-	<vector>
-	<string>
-	<fstream>
-	"Cursos.h"
-	"Asignaciones.h"
-	"GeneradorConstancias.h"
 
-<<<<<<< HEAD
-1778735407 source:c:\users\bmthb\documents\proyectofinal\proyectop12k26\proyectop12k26\src\inscipcion.cpp
+1778856214 source:c:\users\bmthb\documents\proyectofinal\proyectop12k26\proyectop12k26\src\inscipcion.cpp
 	<iostream>
 	<fstream>
+	<cstdio>
 	"inscipcion.h"
 
-1778735407 c:\users\bmthb\documents\proyectofinal\proyectop12k26\proyectop12k26\include\inscipcion.h
+1778856214 c:\users\bmthb\documents\proyectofinal\proyectop12k26\proyectop12k26\include\inscipcion.h
 	<string>
 
-1778735407 source:c:\users\bmthb\documents\proyectofinal\proyectop12k26\proyectop12k26\src\maestros.cpp
-=======
+1778856214 source:c:\users\bmthb\documents\proyectofinal\proyectop12k26\proyectop12k26\src\maestros.cpp
+	"maestros.h"
+	"Carrera.h"
+	"Cursos.h"
+	<iostream>
+	<cstdlib>
+	<vector>
+	<ctime>
+	<fstream>
+	<iomanip>
+	<sstream>
+
 1778820377 source:c:\users\javier\downloads\proyectofinal\proyectop12k26\proyectop12k26\src\inscipcion.cpp
 	<iostream>
 	<fstream>
@@ -2903,23 +2966,8 @@
 	<string>
 
 1778820377 source:c:\users\javier\downloads\proyectofinal\proyectop12k26\proyectop12k26\src\maestros.cpp
->>>>>>> d25c0582f618ea033219d08996f741edd7f2c275
-	"maestros.h"
-	"Carrera.h"
-	"Cursos.h"
-	<iostream>
-	<cstdlib>
-	<vector>
-	<ctime>
-	<fstream>
-	<iomanip>
-	<sstream>
 
-<<<<<<< HEAD
-1778735407 c:\users\bmthb\documents\proyectofinal\proyectop12k26\proyectop12k26\include\maestros.h
-=======
-1778820377 c:\users\javier\downloads\proyectofinal\proyectop12k26\proyectop12k26\include\maestros.h
->>>>>>> d25c0582f618ea033219d08996f741edd7f2c275
+1778856214 c:\users\bmthb\documents\proyectofinal\proyectop12k26\proyectop12k26\include\maestros.h
 	<string>
 	<vector>
 	<fstream>
@@ -2927,32 +2975,20 @@
 	"Carrera.h"
 	"Cursos.h"
 
-<<<<<<< HEAD
-1778735407 source:c:\users\bmthb\documents\proyectofinal\proyectop12k26\proyectop12k26\src\menu inscripcion .cpp
-=======
-1778820377 source:c:\users\javier\downloads\proyectofinal\proyectop12k26\proyectop12k26\src\menu inscripcion .cpp
->>>>>>> d25c0582f618ea033219d08996f741edd7f2c275
-	"menu inscripcion .h"
-	"inscipcion.h"
-	<iostream>
-	<conio.h>
+1778820377 c:\users\javier\downloads\proyectofinal\proyectop12k26\proyectop12k26\include\maestros.h
 
-<<<<<<< HEAD
+1778735407 source:c:\users\bmthb\documents\proyectofinal\proyectop12k26\proyectop12k26\src\menu inscripcion .cpp
+
+1778820377 source:c:\users\javier\downloads\proyectofinal\proyectop12k26\proyectop12k26\src\menu inscripcion .cpp
+
 1778735407 c:\users\bmthb\documents\proyectofinal\proyectop12k26\proyectop12k26\include\menu inscripcion .h
 
 1778735407 source:c:\users\bmthb\documents\proyectofinal\proyectop12k26\proyectop12k26\src\menuasignaciones.cpp
-=======
+
 1778820377 c:\users\javier\downloads\proyectofinal\proyectop12k26\proyectop12k26\include\menu inscripcion .h
 
 1778820377 source:c:\users\javier\downloads\proyectofinal\proyectop12k26\proyectop12k26\src\menuasignaciones.cpp
->>>>>>> d25c0582f618ea033219d08996f741edd7f2c275
-	"MenuAsignaciones.h"
-	"ModuloPagos.h"
-	"Horarios.h"
-	"modulomenurespaldo.h"
-	<iostream>
 
-<<<<<<< HEAD
 1778735723 c:\users\bmthb\documents\proyectofinal\proyectop12k26\proyectop12k26\include\modulopagos.h
 	"validacionpagos0.h"
 
@@ -2963,7 +2999,7 @@
 1778735744 c:\users\bmthb\documents\proyectofinal\proyectop12k26\proyectop12k26\include\modulomenurespaldo.h
 
 1778735407 source:c:\users\bmthb\documents\proyectofinal\proyectop12k26\proyectop12k26\src\menuregistro.cpp
-=======
+
 1778820377 c:\users\javier\downloads\proyectofinal\proyectop12k26\proyectop12k26\include\modulopagos.h
 	"validacionpagos0.h"
 
@@ -2974,22 +3010,22 @@
 1778820377 c:\users\javier\downloads\proyectofinal\proyectop12k26\proyectop12k26\include\modulomenurespaldo.h
 
 1778820377 source:c:\users\javier\downloads\proyectofinal\proyectop12k26\proyectop12k26\src\menuregistro.cpp
->>>>>>> d25c0582f618ea033219d08996f741edd7f2c275
-	"menuRegistro.h"
-	"menu inscripcion .h"
-	"Alumnos.h"
-	"maestros.h"
-	<iostream>
-	<conio.h>
 
-<<<<<<< HEAD
 1778735407 source:c:\users\bmthb\documents\proyectofinal\proyectop12k26\proyectop12k26\src\proyecto.cpp
 	"proyecto.h"
 
 1778735407 c:\users\bmthb\documents\proyectofinal\proyectop12k26\proyectop12k26\include\proyecto.h
 
-1778735407 source:c:\users\bmthb\documents\proyectofinal\proyectop12k26\proyectop12k26\src\recepcion.cpp
-=======
+1778856214 source:c:\users\bmthb\documents\proyectofinal\proyectop12k26\proyectop12k26\src\recepcion.cpp
+	"Recepcion.h"
+	<iostream>
+	<string>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
 1778820377 source:c:\users\javier\downloads\proyectofinal\proyectop12k26\proyectop12k26\src\modulomenurespaldo.cpp
 	"../include/modulomenurespaldo.h"
 	"../include/respaldo.h"
@@ -3007,69 +3043,37 @@
 1778820377 c:\users\javier\downloads\proyectofinal\proyectop12k26\proyectop12k26\include\proyecto.h
 
 1778820377 source:c:\users\javier\downloads\proyectofinal\proyectop12k26\proyectop12k26\src\recepcion.cpp
->>>>>>> d25c0582f618ea033219d08996f741edd7f2c275
-	"Recepcion.h"
-	<iostream>
-	<string>
-	<fstream>
-	<stdlib.h>
-	<cstdlib>
-	<conio.h>
-	<iomanip>
 
-<<<<<<< HEAD
 1778735407 c:\users\bmthb\documents\proyectofinal\proyectop12k26\proyectop12k26\include\recepcion.h
-=======
-1778820377 c:\users\javier\downloads\proyectofinal\proyectop12k26\proyectop12k26\include\recepcion.h
->>>>>>> d25c0582f618ea033219d08996f741edd7f2c275
-	<iostream>
-	<string>
-	"Alumnos.h"
-	"Maestros.h"
 
-<<<<<<< HEAD
+1778820377 c:\users\javier\downloads\proyectofinal\proyectop12k26\proyectop12k26\include\recepcion.h
+
 1778735407 source:c:\users\bmthb\documents\proyectofinal\proyectop12k26\proyectop12k26\src\registrarnotas.cpp
 	<iostream>
 	"RegistrarNotas.h"
 
 1778735407 c:\users\bmthb\documents\proyectofinal\proyectop12k26\proyectop12k26\include\registrarnotas.h
-=======
+
 1778820377 source:c:\users\javier\downloads\proyectofinal\proyectop12k26\proyectop12k26\src\registrarnotas.cpp
 	<iostream>
 	"RegistrarNotas.h"
 
 1778820377 c:\users\javier\downloads\proyectofinal\proyectop12k26\proyectop12k26\include\registrarnotas.h
->>>>>>> d25c0582f618ea033219d08996f741edd7f2c275
-	<string>
-	<vector>
-	"ConfiguracionEvaluacion.h"
-	"Alumnos.h"
-	"bitacora.h"
-	"reportes.h"
 
-<<<<<<< HEAD
 1778735407 c:\users\bmthb\documents\proyectofinal\proyectop12k26\proyectop12k26\include\reportes.h
 	<string>
 	<fstream>
 
 1778735407 source:c:\users\bmthb\documents\proyectofinal\proyectop12k26\proyectop12k26\src\reportes.cpp
-=======
+
 1778820377 c:\users\javier\downloads\proyectofinal\proyectop12k26\proyectop12k26\include\reportes.h
 	<string>
 	<fstream>
 
 1778820377 source:c:\users\javier\downloads\proyectofinal\proyectop12k26\proyectop12k26\src\reportes.cpp
->>>>>>> d25c0582f618ea033219d08996f741edd7f2c275
-	<iostream>
-	<fstream>
-	<sstream>
-	<iomanip>
-	<cstdio>
-	"reportes.h"
 
-<<<<<<< HEAD
 1778735407 source:c:\users\bmthb\documents\proyectofinal\proyectop12k26\proyectop12k26\src\tesoreria.cpp
-=======
+
 1778820377 source:c:\users\javier\downloads\proyectofinal\proyectop12k26\proyectop12k26\src\respaldo.cpp
 	"../include/respaldo.h"
 	<iostream>
@@ -3079,40 +3083,15 @@
 	<ctime>
 
 1778820377 source:c:\users\javier\downloads\proyectofinal\proyectop12k26\proyectop12k26\src\tesoreria.cpp
->>>>>>> d25c0582f618ea033219d08996f741edd7f2c275
-	"Tesoreria.h"
-	"Bancos.h"
-	"Recepcion.h"
-	"GeneradorConstancias.h"
-	<iostream>
-	<string>
 
-<<<<<<< HEAD
 1778735407 source:c:\users\bmthb\documents\proyectofinal\proyectop12k26\proyectop12k26\src\usuarios.cpp
-=======
+
 1778820377 source:c:\users\javier\downloads\proyectofinal\proyectop12k26\proyectop12k26\src\usuarios.cpp
->>>>>>> d25c0582f618ea033219d08996f741edd7f2c275
-	"usuarios.h"
-	<fstream>
-	<cstdlib>
-	<conio.h>
-	<iostream>
-	"bitacora.h"
 
-<<<<<<< HEAD
 1778735407 source:c:\users\bmthb\documents\proyectofinal\proyectop12k26\proyectop12k26\src\validacionpagos0.cpp
-=======
-1778820377 source:c:\users\javier\downloads\proyectofinal\proyectop12k26\proyectop12k26\src\validacionpagos0.cpp
->>>>>>> d25c0582f618ea033219d08996f741edd7f2c275
-	"validacionpagos0.h"
-	<string>
-	<iostream>
-	<fstream>
-	<iomanip>
-	<sstream>
 
-<<<<<<< HEAD
-=======
+1778820377 source:c:\users\javier\downloads\proyectofinal\proyectop12k26\proyectop12k26\src\validacionpagos0.cpp
+
 1778821627 source:c:\users\javier\downloads\proyectofinal\proyectop12k26\proyectop12k26\src\menunotas.cpp
 	"menuNotas.h"
 	<iostream>
@@ -3126,4 +3105,35 @@
 	"RegistrarNotas.h"
 	"reportes.h"
 
->>>>>>> d25c0582f618ea033219d08996f741edd7f2c275
+1778735682 source:c:\users\bmthb\documents\proyectofinal\proyectop12k26\proyectop12k26\src\modulomenurespaldo.cpp
+	"../include/modulomenurespaldo.h"
+	"../include/respaldo.h"
+
+1778735407 c:\users\bmthb\documents\proyectofinal\proyectop12k26\proyectop12k26\include\respaldo.h
+	<string>
+
+1778735661 source:c:\users\bmthb\documents\proyectofinal\proyectop12k26\proyectop12k26\src\modulopagos.cpp
+	"ModuloPagos.h"
+	<iostream>
+
+1778856214 c:\users\bmthb\documents\proyectofinal\proyectop12k26\proyectop12k26\include\menunotas.h
+	<vector>
+	<string>
+	"usuarios.h"
+	"Alumnos.h"
+	"ConfiguracionEvaluacion.h"
+	"RegistrarNotas.h"
+	"reportes.h"
+
+1778856214 source:c:\users\bmthb\documents\proyectofinal\proyectop12k26\proyectop12k26\src\menunotas.cpp
+	"menuNotas.h"
+	<iostream>
+
+1778735407 source:c:\users\bmthb\documents\proyectofinal\proyectop12k26\proyectop12k26\src\respaldo.cpp
+	"../include/respaldo.h"
+	<iostream>
+	<fstream>
+	<sstream>
+	<iomanip>
+	<ctime>
+
