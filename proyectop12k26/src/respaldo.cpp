@@ -11,6 +11,7 @@ using namespace std;
 const string TXT_ASIGNACIONES = "Asignaciones.txt";
 const string TXT_CREDITO      = "tarjetacredito.txt";
 const string TXT_DEBITO       = "tarjetadebito.txt";
+const string TXT_HORARIOS     = "Horarios.txt"; // <-- Constante para el nuevo archivo
 const string ARCHIVO_FINAL    = "Respaldo.txt";
 
 string obtenerFechaHora() {
@@ -32,26 +33,27 @@ void registrarEnBitacora(const RegistroBitacora &reg) {
     }
 }
 
-// Procesa el formato visual de Asignaciones (separador '|')
-bool respaldarAsignaciones() {
-    ifstream archivoIn(TXT_ASIGNACIONES);
+// Lógica compartida para procesar formatos estructurados con el separador '|'
+bool leerYProcesarFormatoVisual(string nombreArchivo, string carnetPorDefecto, string prefijoAccion) {
+    ifstream archivoIn(nombreArchivo);
     if (!archivoIn.is_open()) return false;
 
     string linea;
-    string carnetFijo = "9959-26-1159";
-
     while (getline(archivoIn, linea)) {
         if (linea.empty() || linea.find("==") != string::npos || linea.find("--") != string::npos) continue;
         if (linea.find("|") != string::npos) {
             stringstream ss(linea);
-            string cod, curso;
-            getline(ss, cod, '|'); getline(ss, curso);
+            string col1, col2;
+            getline(ss, col1, '|'); getline(ss, col2);
 
-            // Limpieza de espacios
-            cod.erase(0, cod.find_first_not_of(" \t")); cod.erase(cod.find_last_not_of(" \t") + 1);
-            curso.erase(0, curso.find_first_not_of(" \t")); curso.erase(curso.find_last_not_of(" \t") + 1);
+            // Limpieza de espacios en blanco (Trim)
+            col1.erase(0, col1.find_first_not_of(" \t")); col1.erase(col1.find_last_not_of(" \t") + 1);
+            col2.erase(0, col2.find_first_not_of(" \t")); col2.erase(col2.find_last_not_of(" \t") + 1);
 
-            RegistroBitacora aux = {carnetFijo, curso, "Asignado (Cod: " + cod + ")"};
+            RegistroBitacora aux;
+            aux.carnet = carnetPorDefecto;
+            aux.curso = col2;
+            aux.accion = prefijoAccion + " (Ref: " + col1 + ")";
             registrarEnBitacora(aux);
         }
     }
@@ -59,7 +61,17 @@ bool respaldarAsignaciones() {
     return true;
 }
 
-// Procesa formatos CSV de cobros
+// Llama al procesador usando el archivo de asignaciones
+bool respaldarAsignaciones() {
+    return leerYProcesarFormatoVisual(TXT_ASIGNACIONES, "9959-26-1159", "Asignado");
+}
+
+// Llama al procesador usando el nuevo archivo de horarios
+bool respaldarHorarios() {
+    return leerYProcesarFormatoVisual(TXT_HORARIOS, "9959-26-1159", "Horario Importado");
+}
+
+// Procesa formatos separados por comas (CSV) de los cobros de tarjeta
 bool respaldarCobroTarjeta() {
     auto proc = [](string nom) {
         ifstream f(nom); string l;
@@ -77,14 +89,14 @@ bool respaldarCobroTarjeta() {
 void mostrarRespaldo() {
     ifstream f(ARCHIVO_FINAL); string l;
     cout << "\n--- BITACORA DE RESPALDO ---" << endl;
-    if(!f.is_open()) { cout << "Sin registros." << endl; return; }
+    if(!f.is_open()) { cout << "Sin registros actuales." << endl; return; }
     while(getline(f, l)) cout << l << endl;
 }
 
 void crearRegistroManual() {
     RegistroBitacora n;
     cout << "\nCarnet: "; cin >> n.carnet; cin.ignore();
-    cout << "Curso: "; getline(cin, n.curso);
+    cout << "Curso/Carrera: "; getline(cin, n.curso);
     cout << "Accion: "; getline(cin, n.accion);
     registrarEnBitacora(n);
 }
@@ -99,21 +111,29 @@ void eliminarRegistroPorCarnet() {
     }
     in.close(); out.close();
     remove(ARCHIVO_FINAL.c_str()); rename("Temp.txt", ARCHIVO_FINAL.c_str());
-    if(f) cout << "Eliminado con exito." << endl;
+    if(f) cout << "Eliminacion completada con exito." << endl;
 }
 
 void menuRespaldo() {
     int op;
     do {
-        cout << "\n--- MODULO AUDITORIA ---\n";
-        cout << "1. Respaldar Asignaciones\n2. Respaldar Cobros\n3. Ver Bitacora\n4. Registro Manual\n5. Eliminar Registro\n0. Volver\nOpcion: ";
+        cout << "\n--- MODULO AUDITORIA (INTERACTIVE WORLD) ---\n";
+        cout << "1. Respaldar Asignaciones\n";
+        cout << "2. Respaldar Cobros (TC/TD)\n";
+        cout << "3. Respaldar Horarios\n"; // <-- Nueva opción añadida al menú
+        cout << "4. Ver Bitacora (Respaldo.txt)\n";
+        cout << "5. Registro Manual\n";
+        cout << "6. Eliminar Registro\n";
+        cout << "0. Volver\n";
+        cout << "Opcion: ";
         cin >> op;
         switch(op) {
             case 1: respaldarAsignaciones(); break;
             case 2: respaldarCobroTarjeta(); break;
-            case 3: mostrarRespaldo(); break;
-            case 4: crearRegistroManual(); break;
-            case 5: eliminarRegistroPorCarnet(); break;
+            case 3: respaldarHorarios(); break; // <-- Ejecuta la nueva función
+            case 4: mostrarRespaldo(); break;
+            case 5: crearRegistroManual(); break;
+            case 6: eliminarRegistroPorCarnet(); break;
         }
     } while (op != 0);
 }

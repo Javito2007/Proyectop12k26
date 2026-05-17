@@ -16,48 +16,98 @@ void validacionpagos0::cargarCursosDesdeArchivo(std::string nombreArchivo){
     ifstream archivo(nombreArchivo);
     string lineacompleta;
 
-     if (archivo.is_open()) {
-        cursos.clear();
-        precios1.clear();
-        while (getline(archivo, lineacompleta)) {
-            if (lineacompleta.empty()|| lineacompleta[0] == '='||lineacompleta.find("REGISTRO")!=string::npos) {
+    if (!archivo.is_open()) {
+        cout << "**Error** No se encontro el registro de asignaciones" << endl;
+        return;
+    }
+
+    cursos.clear();
+    precios1.clear();
+    idEstudiante = "";
+    carnetEstudiante = "";
+
+    string carnetBuscar;
+    cout << "   Ingrese el carnet del estudiante a pagar: ";
+    cin >> carnetBuscar;
+
+    string id = "ID:" + carnetBuscar;
+    bool BloqueCorrecto = false;
+
+    while (getline(archivo, lineacompleta)) {
+        if (lineacompleta.find(id) != string::npos) {
+            idEstudiante = lineacompleta;
+            BloqueCorrecto = true;
+            continue;
+        }
+        if (BloqueCorrecto) {
+            if (lineacompleta.find("REGISTRO DE ASIGNACION") != string::npos) {
+                carnetEstudiante = lineacompleta;
+                continue;
+            }
+
+            if (lineacompleta.find("====") != string::npos) {
+                break;
+            }
+            if (lineacompleta.empty() || lineacompleta.find("---") != string::npos) {
                 continue;
             }
             stringstream ss(lineacompleta);
             string codigo, nombreCurso, precioTexto;
-            if(getline(ss, codigo, '|')&& getline(ss, nombreCurso, '|')&& getline(ss,precioTexto)){
 
-                size_t primero=nombreCurso.find_first_not_of(" ");
-                size_t ultimo= nombreCurso.find_last_not_of(" ");
+            if (getline(ss, codigo, '|') && getline(ss, nombreCurso, '|') && getline(ss, precioTexto)) {
+
+                size_t primero = nombreCurso.find_first_not_of(" ");
+                size_t ultimo = nombreCurso.find_last_not_of(" ");
                 if (primero != string::npos && ultimo != string::npos) {
                     nombreCurso = nombreCurso.substr(primero, (ultimo - primero + 1));
                 }
 
-
-            size_t posNumero= precioTexto.find_first_of("0123456789");
-
-            if(posNumero != string::npos){
-                string numeroLimpio = precioTexto.substr(posNumero);
-                double precioDouble = stod(numeroLimpio);
-
-                cursos.push_back(nombreCurso);
-                precios1.push_back(precioDouble);
+                size_t posNumero = precioTexto.find_first_of("0123456789");
+                if (posNumero != string::npos) {
+                    string numeroLimpio = precioTexto.substr(posNumero);
+                    try {
+                        double precioDouble = stod(numeroLimpio);
+                        cursos.push_back(nombreCurso);
+                        precios1.push_back(precioDouble);
+                    } catch (const exception& e) {
+                    }
                 }
             }
         }
-        archivo.close();
-        cout << "Cursos y precios cargados de forma exitosa." << endl;
+    }
+    archivo.close();
+
+    if (!BloqueCorrecto || cursos.empty()) {
+        cout << "   [!] No se encontraron cursos asignados para el carnet: " << carnetBuscar << endl;
     } else {
-        cout << "Error: No se encontro el archivo " << nombreArchivo << endl;
+        cout << "   [+] Datos de asignacion cargados con exito." << endl;
     }
 
 }
  void validacionpagos0::informaciondecursos()
 {
-     cout<< "--- Lista de cursos y precios---" << endl;
-    for(int i = 0; i < cursos.size(); i++){
-        cout<< i+1 <<"."<<cursos[i]<< endl; //"  -Precio: Q" << precios[i] << endl;
+    if (cursos.empty()) {
+        cout << "No hay cursos registrados. Asegurate de cargar el archivo primero." << endl;
+        return;
     }
+    if (!idEstudiante.empty()) cout << idEstudiante << endl;
+    if (!carnetEstudiante.empty()) cout << carnetEstudiante << endl;
+
+    cout << "--------------------------------------------------------" << endl;
+    cout << "--- Lista de cursos y precios---" << endl;
+    for(size_t i = 0; i < cursos.size(); i++){
+        cout<< i+1 <<"."<<cursos[i]<<" -Precio: Q" << precios1[i] << endl;
+    }
+    cout<<"=================================================="<<endl;
+}
+
+double validacionpagos0::CalculoTotal(){
+    double pagoCursos=0;
+
+    for(size_t i =0; i < precios1.size(); i++){
+        pagoCursos += precios1[i];
+    }
+    return pagoCursos;
 }
 
 void validacionpagos0::pagoAlumno1(double pago1, double precioscurso)
@@ -77,14 +127,13 @@ void validacionpagos0::pagoAlumno1(double pago1, double precioscurso)
     cout <<"¡Pago validado con exito!¡Exitos en tus estudios!" << endl;
 }
 
-void validacionpagos0::tipodePago(int Tipotarjeta, int &numeroTarjeta, std::string &nombre, std::string &fecha, int &codigoSeguridad)
+void validacionpagos0::tipodePago(int Tipotarjeta, long long &numeroTarjeta, std::string &nombre, std::string &fecha, int &codigoSeguridad)
 {
             char continuar;
             string mesColegiatura;
             string nombreArchivo;
-            double resultado = 1020.00;
+            double resultado = CalculoTotal();
             double pagoalumno;
-
         if(Tipotarjeta==1){
             nombreArchivo = "tarjetadebito.txt";
         } else {
@@ -96,44 +145,44 @@ void validacionpagos0::tipodePago(int Tipotarjeta, int &numeroTarjeta, std::stri
         cout<<"Ingrese el Mes que va a pagar: "<<endl;
         cin >>mesColegiatura;
 
-        cout <<"para pagar con tu tarjeta de debito ingresa lo siguiente:" << endl;
-        cout <<"Ingresa el numero de Tarjeta: " << endl;
+        cout <<"Para pagar con tu tarjeta de debito ingresa lo siguiente:" << endl;
+        cout <<"-->Ingresa el numero de Tarjeta: " << endl;
         cin >> numeroTarjeta;
-        cout <<"Ingresa tu nombre COMO ESTA EN LA TARJETA: " << endl;
+        cout <<"-->Ingresa tu nombre COMO ESTA EN LA TARJETA: " << endl;
         cin.ignore();
         getline(cin, nombre);
 
         for(int i = 0; i < nombre.length(); i++) {
             if(nombre[i] == ' ') nombre[i] = '_';}
 
-        cout <<"Fecha de vencimiento: " << endl;
+        cout <<"-->Fecha de vencimiento: " << endl;
         getline(cin, fecha);
-        cout <<"Ingresa el codigo de seguridad: " << endl;
+        cout <<"-->Ingresa el codigo de seguridad: " << endl;
         cin >> codigoSeguridad;
-        cout <<"Tu tarjeta ha sido confirmada" << endl;
+        cout <<"--Tu tarjeta ha sido confirmada--" << endl;
 
-        cout<<"Total a pagar: Q"<< resultado<<endl;
-        cout << "Ingrese el monto: "<< endl;
+        cout<<"-->Total a pagar: Q"<< resultado<<endl;
+        cout << "-->Ingrese el monto: "<< endl;
         cin >> pagoalumno;
         pagoAlumno1(pagoalumno, resultado);
 
         ofstream file;
         file.open(nombreArchivo, ios::app);
         if(file.is_open()){
-        file << left << setw(15) << numeroTarjeta << left << setw(20) << nombre << left << setw(15) << mesColegiatura << "\n";
+        file << left << setw(20) << numeroTarjeta << left << setw(20) << nombre << left << setw(15) << mesColegiatura <<left << setw(15)<< pagoalumno << endl;
         file.close();
-        cout << "Pago de "<< mesColegiatura<<" guardado correctamente" << endl;
+        cout << "----Pago de "<< mesColegiatura<<" guardado correctamente----" << endl;
 
     }
     cout<<"¿Deseas realizar otro pago? (s/n); ";
     cin>>continuar;
     }while (continuar=='s'||continuar=='S');
 
-cout <<"Proceso de pagos finalizado."<<endl;
+cout <<"**Proceso de pagos finalizado.**"<<endl;
 }
 
 
-void validacionpagos0::leerInformacion(int tarjetaBuscada, int Tipotarjeta){
+void validacionpagos0::leerInformacion(long long tarjetaBuscada, int Tipotarjeta){
     system("cls");
     string nombreArchivo;
     if(Tipotarjeta==1){
@@ -143,28 +192,28 @@ void validacionpagos0::leerInformacion(int tarjetaBuscada, int Tipotarjeta){
         }
 
     ifstream archivo(nombreArchivo);
-    //char num[16], nombre[21], mes[16];
     string num, nombre, mes;
+    double monto;
     int total = 0;
 
-    cout << "\n------------------------- Detalle de Pagos -------------------------\n";
-    cout << left << setw(15) << "Tarjeta" << setw(20) << "Nombre" << setw(15) << "Mes" << endl;
-    cout << "--------------------------------------------------------------------\n";
+    cout << "\n------------------------- Detalle de Pagos --------------------------------------------------------\n";
+    cout << left << setw(20) << "Tarjeta" << setw(20) << "Nombre" << setw(15) << "Mes"<< setw(15)<<"Monto Pagado" << endl;
+    cout << "-----------------------------------------------------------------------------------------------------\n";
 
     if (!archivo) {
         cout << "\t\t\tNo hay informacion..." << endl;
     } else {
-        while (archivo >> num >> nombre >> mes) {
+        while (archivo >> num >> nombre >> mes >> monto ) {
              if (num.empty()) {
                     continue;}
             try {
-                if (stoi(num) == tarjetaBuscada) {
+                if (stoll(num) == tarjetaBuscada) {
 
-                    for(int i = 0; i < nombre.length(); i++) {
+                    for(size_t i = 0; i < nombre.length(); i++) {
                         if(nombre[i] == '_') nombre[i] = ' ';
                     }
 
-                    cout << left << setw(15) << num << setw(20) << nombre << setw(15) << mes << endl;
+                    cout << left << setw(20) << num << setw(20) << nombre << setw(15) << mes <<"Q"<< setw(15)<< monto<< endl;
                     total++;
                 }
             } catch (...) {
@@ -173,11 +222,11 @@ void validacionpagos0::leerInformacion(int tarjetaBuscada, int Tipotarjeta){
         }
     }
     archivo.close();
-    cout << "\n--------------------------------------------------------------------\n";
+    cout << "\n------------------------------------------------------------------------------------------------------\n";
     system("pause");
 }
 
-void validacionpagos0::modificarInformacion(int tarjetaBuscada, int Tipotarjeta){
+void validacionpagos0::modificarInformacion(long long tarjetaBuscada, int Tipotarjeta){
     system("cls");
     string nombreArchivo;
     if (Tipotarjeta == 1){
@@ -198,14 +247,14 @@ void validacionpagos0::modificarInformacion(int tarjetaBuscada, int Tipotarjeta)
 
     while (file >> num >> nombre >> mes) {
     if (stoi(num) != tarjetaBuscada) {
-                file1 << left << setw(15) << num << left << setw(20) << nombre << left << setw(15) << mes << "\n";
+                file1 << left << setw(20) << num << left << setw(20) << nombre << left << setw(15) << mes << "\n";
         } else {
             cout << "\n Tarjeta encontrada: " << num;
             cout << "\n Ingrese el nuevo nombre del titular: ";
             cin.ignore();
             getline(cin, nombre);
 
-            file1 << left << setw(15) << num << left << setw(20) << nombre << left << setw(15) << mes << "\n";
+            file1 << left << setw(20) << num << left << setw(20) << nombre << left << setw(15) << mes << "\n";
             found++;
             }
         }
@@ -221,7 +270,7 @@ void validacionpagos0::modificarInformacion(int tarjetaBuscada, int Tipotarjeta)
 
 }
 
-void validacionpagos0::borrar(int tarjetabuscada, int Tipotarjeta){
+void validacionpagos0::borrar(long long tarjetabuscada, int Tipotarjeta){
     system("cls");
     string nombreArchivo;
     if (Tipotarjeta == 1){
@@ -251,7 +300,7 @@ void validacionpagos0::borrar(int tarjetabuscada, int Tipotarjeta){
             cout<<"\n\t\tRegistro de "<<mes<<" encontrado y eliminado.";
 
         }else {
-            file2<<left<<setw(15)<<num<<left<<setw(20)<<nombre<<left<<setw(15)<< mes<<"\n";
+            file2<<left<<setw(20)<<num<<left<<setw(20)<<nombre<<left<<setw(15)<< mes<<"\n";
         }
     }
     file2.close();
@@ -266,7 +315,7 @@ void validacionpagos0::borrar(int tarjetabuscada, int Tipotarjeta){
     }
 
 
-void validacionpagos0::menuGestionPagos(int tarjetaBuscada, int Tipotarjeta){
+void validacionpagos0::menuGestionPagos(long long tarjetaBuscada, int Tipotarjeta){
     int opcion;
     do{
         cout << "\n--- Menu Gestion de pagos ---" << endl;
