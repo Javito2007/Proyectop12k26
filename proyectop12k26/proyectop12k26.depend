@@ -63,16 +63,20 @@
 
 1778122531 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\proyecto.h
 
-1778511933 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\carrera.cpp
+1779077712 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\carrera.cpp
 	"Carrera.h"
-	<stdlib.h>
+	<iostream>
+	<fstream>
+	<iomanip>
 	<vector>
+	<conio.h>
+	<stdlib.h>
 
 1778447896 147324c7544890fb42d70478972bd17848a4f
 	"Carrera.h"
 	<stdlib.h>
 
-1778511933 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\carrera.h
+1779077689 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\carrera.h
 	<iostream>
 	<fstream>
 	<iomanip>
@@ -421,11 +425,11 @@
 1778122531 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\usuarios.h
 	<iostream>
 
-1778859836 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\bancos.h
+1779076860 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\bancos.h
 	<string>
 	"GeneradorConstancias.h"
 
-1778683344 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\recepcion.h
+1779076860 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\recepcion.h
 	<iostream>
 	<string>
 	"Alumnos.h"
@@ -484,7 +488,7 @@
 	"Alumnos.h"
 	"Maestros.h"
 
-1778859836 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\generadorconstancias.h
+1779033860 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\generadorconstancias.h
 	<iostream>
 	<string>
 	<fstream>
@@ -501,17 +505,17 @@
 	<iomanip>
 	<sstream>
 
-1778859836 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\generadorconstancias.cpp
+1779033860 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\generadorconstancias.cpp
 	"GeneradorConstancias.h"
 	<cstdlib>
 	<ctime>
 	<iostream>
 	<fstream>
 
-1778722411 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\horarios.cpp
+1779033860 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\horarios.cpp
 	"Horarios.h"
 
-1778684309 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\horarios.h
+1779033860 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\horarios.h
 	<iostream>
 	<vector>
 	<string>
@@ -532,15 +536,15 @@
 	"Asignaciones.h"
 	"GeneradorConstancias.h"
 
-1778804706 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\recepcion.cpp
+1779076860 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\recepcion.cpp
 	"Recepcion.h"
 	<iostream>
-	<string>
 	<fstream>
-	<stdlib.h>
+	<iomanip>
 	<cstdlib>
 	<conio.h>
-	<iomanip>
+	<sstream>
+	<algorithm>
 
 1778685513 source:c:\users\axel\desktop\programacion1\proyectop12k26\proyectop12k26\src\inscipcion.cpp
 	<iostream>
@@ -560,7 +564,7 @@
 	<conio.h>
 	<iomanip>
 
-1778804706 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\maestros.cpp
+1779033860 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\maestros.cpp
 	"maestros.h"
 	"Carrera.h"
 	"Cursos.h"
@@ -1259,7 +1263,7 @@
 	"menuRegistro.h"
 	"MenuAsignaciones.h"
 
-1778859836 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\asignaciones.cpp
+1779033860 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\asignaciones.cpp
 	"Asignaciones.h"
 	<iostream>
 	<fstream>
@@ -1282,17 +1286,19 @@
 1778439977 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\menuasignaciones.h
 	"Asignaciones.h"
 
-1778686863 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\menuregistro.cpp
+1779076860 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\menuregistro.cpp
 	"menuRegistro.h"
 	"menu inscripcion .h"
 	"Alumnos.h"
 	"maestros.h"
+	"Cursos.h"
+	"Carrera.h"
 	<iostream>
 	<conio.h>
 
 1778510005 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\menuregistro.h
 
-1778859836 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\tesoreria.cpp
+1779033860 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\tesoreria.cpp
 	"Tesoreria.h"
 	"Bancos.h"
 	"Recepcion.h"
@@ -2251,7 +2257,7 @@
 1778079345 c:\users\antony\repositorio\proyectofinal\proyectop12k26\proyectop12k26\include\usuarios.h
 	<iostream>
 
-1778544021 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\main.cpp
+1779033860 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\main.cpp
 	<iostream>
 	<fstream>
 	"Tesoreria.h"
@@ -2260,7 +2266,7 @@
 	"menuRegistro.h"
 	"MenuAsignaciones.h"
 
-1778859836 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\bancos.cpp
+1779076860 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\bancos.cpp
 	"Bancos.h"
 	"GeneradorConstancias.h"
 	<iostream>
@@ -2376,7 +2382,7 @@
 1778544021 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\modulopagos.h
 	"validacionpagos0.h"
 
-1778859836 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\validacionpagos0.h
+1779033860 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\validacionpagos0.h
 	<string>
 	<vector>
 
@@ -2386,16 +2392,16 @@
 	"../include/modulomenurespaldo.h"
 	"../include/respaldo.h"
 
-1778722411 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\respaldo.h
+1779033860 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\respaldo.h
 	<string>
 
-1778859836 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\modulopagos.cpp
+1779033860 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\modulopagos.cpp
 	"ModuloPagos.h"
 	"validacionpagos0.h"
 	<iostream>
 	<iomanip>
 
-1778722411 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\respaldo.cpp
+1779033860 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\respaldo.cpp
 	"../include/respaldo.h"
 	<iostream>
 	<fstream>
@@ -2403,7 +2409,7 @@
 	<iomanip>
 	<ctime>
 
-1778859836 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\validacionpagos0.cpp
+1779033860 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\validacionpagos0.cpp
 	"validacionpagos0.h"
 	<string>
 	<iostream>
