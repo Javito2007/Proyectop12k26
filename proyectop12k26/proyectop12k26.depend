@@ -1749,11 +1749,11 @@
 	"menuRegistro.h"
 	"MenuAsignaciones.h"
 
-1779043992 c:\users\moise\documents\proyectop12k26\proyectop12k26\include\bancos.h
+1779115249 c:\users\moise\documents\proyectop12k26\proyectop12k26\include\bancos.h
 	<string>
 	"GeneradorConstancias.h"
 
-1778683739 c:\users\moise\documents\proyectop12k26\proyectop12k26\include\recepcion.h
+1779115249 c:\users\moise\documents\proyectop12k26\proyectop12k26\include\recepcion.h
 	<iostream>
 	<string>
 	"Alumnos.h"
@@ -1811,15 +1811,15 @@
 1778795168 c:\users\moise\documents\proyectop12k26\proyectop12k26\include\inscipcion.h
 	<string>
 
-1778795168 source:c:\users\moise\documents\proyectop12k26\proyectop12k26\src\recepcion.cpp
+1779115249 source:c:\users\moise\documents\proyectop12k26\proyectop12k26\src\recepcion.cpp
 	"Recepcion.h"
 	<iostream>
-	<string>
 	<fstream>
-	<stdlib.h>
+	<iomanip>
 	<cstdlib>
 	<conio.h>
-	<iomanip>
+	<sstream>
+	<algorithm>
 
 1778643891 c:\users\moise\documents\proyectop12k26\proyectop12k26\include\tesoreria.h
 
@@ -1892,11 +1892,13 @@
 	<string>
 	<vector>
 
-1778687709 source:c:\users\moise\documents\proyectop12k26\proyectop12k26\src\menuregistro.cpp
+1779115249 source:c:\users\moise\documents\proyectop12k26\proyectop12k26\src\menuregistro.cpp
 	"menuRegistro.h"
 	"menu inscripcion .h"
 	"Alumnos.h"
 	"maestros.h"
+	"Cursos.h"
+	"Carrera.h"
 	<iostream>
 	<conio.h>
 
@@ -1932,7 +1934,7 @@
 	<iostream>
 	<string>
 
-1778795509 source:c:\users\moise\documents\proyectop12k26\proyectop12k26\src\bancos.cpp
+1779115395 source:c:\users\moise\documents\proyectop12k26\proyectop12k26\src\bancos.cpp
 	"Bancos.h"
 	"GeneradorConstancias.h"
 	<iostream>
