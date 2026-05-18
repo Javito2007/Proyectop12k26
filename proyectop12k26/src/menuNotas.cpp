@@ -1,3 +1,4 @@
+// creado por Juan Jolon
 #include "menuNotas.h"
 #include <iostream>
 using namespace std;
@@ -5,7 +6,7 @@ using namespace std;
 void SistemaNotas::ejecutarMenu() {
     int opcion;
 
-    // Bucle principal del menú del sistema
+    // Bucle principal del menï¿½ del sistema
     do {
         cout << "   SISTEMA DE GESTION DE NOTAS"         << endl;
         cout << "   Usuario: " << usuarioActivo           << endl;
@@ -24,10 +25,10 @@ void SistemaNotas::ejecutarMenu() {
         cin >> opcion;
         cin.ignore();
 
-        // Ejecuta la opción seleccionada por el usuario
+        // Ejecuta la opciï¿½n seleccionada por el usuario
         switch (opcion) {
             case 1:
-                // Configuración del curso y evaluación
+                // Configuraciï¿½n del curso y evaluaciï¿½n
                 config = ConfiguracionEvaluacion();
                 config.seleccionarCurso();
                 config.configurarPeriodo();
@@ -35,9 +36,10 @@ void SistemaNotas::ejecutarMenu() {
                 break;
 
             case 2:
-                // Selección de alumnos para el curso actual
+                // Selecciï¿½n de alumnos para el curso actual
+                // Filtra automaticamente por curso usando Asignaciones.txt y Alumnos.txt
                 registro = RegistrarNotas();
-                registro.seleccionarAlumnos(listaAlumnos);
+                registro.seleccionarAlumnosPorCurso(config.getCodigoCurso());
                 break;
 
             case 3:
