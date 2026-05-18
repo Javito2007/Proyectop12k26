@@ -345,7 +345,7 @@ void Alumnos::menuInsertar()
                 borrarAlumno();
                 break;
             case 6:
-                exit(0);
+                return;
             default:
                 cout << "\n\t\t\t\t Opcion invalida... Por favor pruebe otra vez" << endl;
         }

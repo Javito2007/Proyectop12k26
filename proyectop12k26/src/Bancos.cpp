@@ -272,39 +272,7 @@ double Bancos::montoCobro(string nombreAlumno)
 
 double Bancos::montoPago(int codigo)
 {
-    fstream file;
-    string linea;
-    double montoEncontrado = 0.0;
-
-    file.open("Maestros.txt", ios::in);
-
-    if (file.is_open())
-    {
-        while (getline(file, linea))
-        {
-            stringstream ss(linea);
-            string strCodigo, nombre, apellido, dpi, strMonto;
-
-            getline(ss, strCodigo, '|');
-            getline(ss, nombre, '|');
-            getline(ss, apellido, '|');
-            getline(ss, dpi, '|');
-            getline(ss, strMonto, '|');
-
-            if (!strCodigo.empty() && stoi(strCodigo) == codigo)
-            {
-                montoEncontrado = stod(strMonto);
-                break;
-            }
-        }
-        file.close();
-    }
-    else
-    {
-        cout << "Error: No se pudo abrir el archivo Maestros.txt" << endl;
-    }
-
-    return montoEncontrado;
+    //pendiente
 }
 
 bool Bancos::crearCuenta(string nombreCliente, double monto, string nombreBanco)

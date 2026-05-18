@@ -1,4 +1,4 @@
-//Creado el día 4 de mayo por los alumnos
+//Creado el dia 4 de mayo por los alumnos
 //9959-25-4900: Jhonny Flores
 //9959-25-4992: Josue Muy
 //9959-25-6194: Juan Jolon
@@ -15,10 +15,10 @@
 #include "reportes.h"
 using namespace std;
 
-// Constante que define el máximo de alumnos que se pueden registrar por curso
+// Constante que define el maximo de alumnos que se pueden registrar por curso
 const int MAX_ALUMNOS = 10;
 
-// Estructura que almacena toda la información de notas de un alumno
+// Estructura que almacena toda la informacion de notas de un alumno
 struct Nota {
     string carnet;
     string nombreAlumno;
@@ -34,20 +34,31 @@ struct Nota {
 
 class RegistrarNotas {
 private:
-    Nota notas[MAX_ALUMNOS];    // Arreglo que guarda las notas de los alumnos seleccionados
-    int  nAlumnos;              // Cantidad actual de alumnos registrados
+    Nota notas[MAX_ALUMNOS];
+    int  nAlumnos;
 
-    // Métodos privados (utilitarios)
+    // Metodos privados utilitarios
     bool  validarRango(float valor, float maximo);
     float calcularZona(float p1, float p2, float tareas);
     float calcularNotaFinal(float zona, float examenFinal);
     float pedirNota(const string& etiqueta, int maximo);
 
-public:
-    RegistrarNotas();   // Constructor
+    // Lee Alumnos.txt y retorna vector con todos los alumnos
+    vector<Alumnos> cargarAlumnosDesdeArchivo();
 
-    // Métodos públicos principales
+    // Lee Asignaciones.txt y retorna los carnets asignados a un curso
+    vector<string> cargarCarnetsPorCurso(const string& codigoCurso);
+
+public:
+    RegistrarNotas();
+
+    // Seleccion manual
     void seleccionarAlumnos(vector<Alumnos>& listaAlumnos);
+
+    // lee Alumnos.txt y Asignaciones.txt automaticamente
+    // Usar esta cuando ya se tiene el codigoCurso de ConfiguracionEvaluacion
+    void seleccionarAlumnosPorCurso(const string& codigoCurso);
+
     void ingresarNotas(const ConfiguracionEvaluacion& config);
     void almacenarNotas(const string& usuarioActivo);
     void mostrarResumen();

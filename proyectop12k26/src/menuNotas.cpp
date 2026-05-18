@@ -1,38 +1,12 @@
+// creado por Juan Jolon
 #include "menuNotas.h"
 #include <iostream>
 using namespace std;
 
-bool SistemaNotas::iniciar() {
-    // Intenta iniciar sesión. Si falla, cierra el sistema.
-    if (!sesion.loginUsuarios()) {
-        cout << "Acceso denegado. Cerrando sistema." << endl;
-        return false;
-    }
-
-    // Guarda el nombre del usuario que inició sesión
-    usuarioActivo = sesion.getNombre();
-
-    int cantAlumnos;
-    cout << "\n¿Cuantos alumnos desea registrar en el sistema? ";
-    cin >> cantAlumnos;
-    cin.ignore();
-
-    // Registra la cantidad de alumnos solicitada por el usuario
-    for (int i = 0; i < cantAlumnos; i++) {
-        Alumnos a;
-        a.menuRegistro();           // Muestra el menú de registro de cada alumno
-        cin.clear();
-        cin.ignore(1000, '\n');     // Limpia el buffer de entrada
-        listaAlumnos.push_back(a);  // Agrega el alumno a la lista
-    }
-
-    return true;
-}
-
 void SistemaNotas::ejecutarMenu() {
     int opcion;
 
-    // Bucle principal del menú del sistema
+    // Bucle principal del menï¿½ del sistema
     do {
         cout << "   SISTEMA DE GESTION DE NOTAS"         << endl;
         cout << "   Usuario: " << usuarioActivo           << endl;
@@ -51,10 +25,10 @@ void SistemaNotas::ejecutarMenu() {
         cin >> opcion;
         cin.ignore();
 
-        // Ejecuta la opción seleccionada por el usuario
+        // Ejecuta la opciï¿½n seleccionada por el usuario
         switch (opcion) {
             case 1:
-                // Configuración del curso y evaluación
+                // Configuraciï¿½n del curso y evaluaciï¿½n
                 config = ConfiguracionEvaluacion();
                 config.seleccionarCurso();
                 config.configurarPeriodo();
@@ -62,9 +36,10 @@ void SistemaNotas::ejecutarMenu() {
                 break;
 
             case 2:
-                // Selección de alumnos para el curso actual
+                // Selecciï¿½n de alumnos para el curso actual
+                // Filtra automaticamente por curso usando Asignaciones.txt y Alumnos.txt
                 registro = RegistrarNotas();
-                registro.seleccionarAlumnos(listaAlumnos);
+                registro.seleccionarAlumnosPorCurso(config.getCodigoCurso());
                 break;
 
             case 3:
@@ -99,18 +74,4 @@ void SistemaNotas::ejecutarMenu() {
                 cout << "\nOpcion invalida." << endl;
         }
     } while (opcion != 9);
-}
-
-int main() {
-    // Crea una instancia del sistema de gestión de notas
-    SistemaNotas sistema;
-
-    // Intenta inicializar el sistema (login + registro de alumnos)
-    if (!sistema.iniciar())
-        return 1;   // Sale del programa si la inicialización falla
-
-    // Ejecuta el menú principal del sistema
-    sistema.ejecutarMenu();
-
-    return 0;   // Finaliza el programa correctamente
 }

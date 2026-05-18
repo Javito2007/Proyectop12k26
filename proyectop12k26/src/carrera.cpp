@@ -1,35 +1,27 @@
 #include "Carrera.h"
-#include <iostream>
-#include <fstream>
-#include <iomanip>
-#include <vector>
-#include <conio.h>
 #include <stdlib.h>
+#include <vector> //Creado por David Alegria 9959-23-11277
 
-using namespace std;
-
-// Creado por David Alegria 9959-23-11277
-
-Carrera::Carrera()
+ Carrera::Carrera()
 {
-    // ctor
+    //ctor
 }
 
 Carrera::Carrera(string codigoCarrera, string nombreCarrera, bool estadoCarrera)
 {
-    this->codigoCarrera = codigoCarrera;
-    this->nombreCarrera = nombreCarrera;
-    this->estadoCarrera = estadoCarrera;
+    this -> codigoCarrera = codigoCarrera;
+    this -> nombreCarrera = nombreCarrera;
+    this -> estadoCarrera = estadoCarrera;
+
 }
+
 
 vector<Carrera> Carrera::datosCarreras()
 {
     vector<Carrera> infoCarreras;
-
-    infoCarreras.push_back(Carrera("9959", "Ingenieria en Sistemas", true));
-    infoCarreras.push_back(Carrera("9975", "Ingenieria Industrial", true));
-    infoCarreras.push_back(Carrera("9973", "Ingenieria Civil", true));
-
+    infoCarreras.push_back(Carrera("9959", "Ingeniera en Sistemas", true));
+    infoCarreras.push_back(Carrera("9975", "Ingeniera Industrial", true));
+    infoCarreras.push_back(Carrera("9973", "Ingeniera Civil", true));
     return infoCarreras;
 }
 
@@ -66,7 +58,7 @@ void Carrera::menu()
                     cout << "\nDesea agregar otra carrera (Y/N): ";
                     cin >> x;
 
-                } while(x == 'y' || x == 'Y');
+                }while(x == 'y' || x == 'Y');
 
                 break;
 
@@ -96,7 +88,7 @@ void Carrera::menu()
 
         getch();
 
-    } while(opcion != 6);
+    }while(opcion != 6);
 }
 
 void Carrera::insertar()
@@ -104,59 +96,27 @@ void Carrera::insertar()
     system("cls");
 
     fstream file;
-    string codigoTemp, nombreTemp;
-    bool estadoTemp;
-    bool existe = false;
 
     cout << "\n---------------- AGREGAR CARRERA ----------------" << endl;
 
     cout << "Ingrese codigo de la carrera: ";
-    cin >> codigoTemp;
-
-    // Verificar si ya existe
-    file.open("Carreras.txt", ios::in);
-
-    if(file)
-    {
-        while(getline(file, codigoCarrera, '|'))
-        {
-            getline(file, nombreCarrera, '|');
-            file >> estadoCarrera;
-            file.ignore();
-
-            if(codigoTemp == codigoCarrera)
-            {
-                existe = true;
-                break;
-            }
-        }
-
-        file.close();
-    }
-
-    if(existe)
-    {
-        cout << "\nEl codigo ya existe...";
-        return;
-    }
+    cin >> codigoCarrera;
 
     cin.ignore();
 
     cout << "Ingrese nombre de la carrera: ";
-    getline(cin, nombreTemp);
+    getline(cin, nombreCarrera);
 
     cout << "Ingrese estado de la carrera (1 = Activa, 0 = Inactiva): ";
-    cin >> estadoTemp;
+    cin >> estadoCarrera;
 
     file.open("Carreras.txt", ios::app | ios::out);
 
-    file << codigoTemp << "|"
-         << nombreTemp << "|"
-         << estadoTemp << "\n";
+    file << left << setw(15) << codigoCarrera
+         << left << setw(30) << nombreCarrera
+         << left << setw(10) << estadoCarrera << "\n";
 
     file.close();
-
-    cout << "\nCarrera agregada correctamente...";
 }
 
 void Carrera::desplegar()
@@ -168,43 +128,34 @@ void Carrera::desplegar()
 
     cout << "\n---------------- LISTA DE CARRERAS ----------------" << endl;
 
-    // MOSTRAR LAS CARRERAS PREDEFINIDAS
-    vector<Carrera> carreras = datosCarreras();
-
-    for(int i = 0; i < carreras.size(); i++)
-    {
-        cout << "\nCodigo Carrera: " << carreras[i].getcodigoCarrera() << endl;
-        cout << "Nombre Carrera: " << carreras[i].getnombreCarrera() << endl;
-        cout << "Estado Carrera: " << carreras[i].getestadoCarrera() << endl;
-
-        total++;
-    }
-
-    // MOSTRAR LAS CARRERAS DEL ARCHIVO
     file.open("Carreras.txt", ios::in);
 
-    if(file)
+    if(!file)
     {
-        while(getline(file, codigoCarrera, '|'))
+        cout << "\nNo hay informacion...";
+    }
+    else
+    {
+        file >> codigoCarrera >> nombreCarrera >> estadoCarrera;
+
+        while(!file.eof())
         {
-            getline(file, nombreCarrera, '|');
-            file >> estadoCarrera;
-            file.ignore();
+            total++;
 
             cout << "\nCodigo Carrera: " << codigoCarrera << endl;
             cout << "Nombre Carrera: " << nombreCarrera << endl;
             cout << "Estado Carrera: " << estadoCarrera << endl;
 
-            total++;
+            file >> codigoCarrera >> nombreCarrera >> estadoCarrera;
         }
 
-        file.close();
+        if(total == 0)
+        {
+            cout << "\nNo hay informacion...";
+        }
     }
 
-    if(total == 0)
-    {
-        cout << "\nNo hay informacion...";
-    }
+    file.close();
 }
 
 void Carrera::modificar()
@@ -228,19 +179,17 @@ void Carrera::modificar()
         cout << "Ingrese el codigo de la carrera a modificar: ";
         cin >> codigoBuscar;
 
-        file1.open("Temporal.txt", ios::out);
+        file1.open("Temporal.txt", ios::app | ios::out);
 
-        while(getline(file, codigoCarrera, '|'))
+        file >> codigoCarrera >> nombreCarrera >> estadoCarrera;
+
+        while(!file.eof())
         {
-            getline(file, nombreCarrera, '|');
-            file >> estadoCarrera;
-            file.ignore();
-
             if(codigoBuscar != codigoCarrera)
             {
-                file1 << codigoCarrera << "|"
-                      << nombreCarrera << "|"
-                      << estadoCarrera << "\n";
+                file1 << left << setw(15) << codigoCarrera
+                      << left << setw(30) << nombreCarrera
+                      << left << setw(10) << estadoCarrera << "\n";
             }
             else
             {
@@ -255,12 +204,14 @@ void Carrera::modificar()
                 cout << "Ingrese nuevo estado (1 = Activa, 0 = Inactiva): ";
                 cin >> estadoCarrera;
 
-                file1 << codigoCarrera << "|"
-                      << nombreCarrera << "|"
-                      << estadoCarrera << "\n";
+                file1 << left << setw(15) << codigoCarrera
+                      << left << setw(30) << nombreCarrera
+                      << left << setw(10) << estadoCarrera << "\n";
 
                 encontrado++;
             }
+
+            file >> codigoCarrera >> nombreCarrera >> estadoCarrera;
         }
 
         file.close();
@@ -288,37 +239,21 @@ void Carrera::buscar()
     string codigoBuscar;
     int encontrado = 0;
 
-    cout << "\n---------------- BUSCAR CARRERA ----------------" << endl;
-
-    cout << "Ingrese el codigo de la carrera a buscar: ";
-    cin >> codigoBuscar;
-
-    // BUSCAR EN VECTOR
-    vector<Carrera> carreras = datosCarreras();
-
-    for(int i = 0; i < carreras.size(); i++)
-    {
-        if(codigoBuscar == carreras[i].getcodigoCarrera())
-        {
-            cout << "\nCodigo Carrera: " << carreras[i].getcodigoCarrera() << endl;
-            cout << "Nombre Carrera: " << carreras[i].getnombreCarrera() << endl;
-            cout << "Estado Carrera: " << carreras[i].getestadoCarrera() << endl;
-
-            encontrado++;
-        }
-    }
-
-    // BUSCAR EN ARCHIVO
     file.open("Carreras.txt", ios::in);
 
-    if(file)
+    if(!file)
     {
-        while(getline(file, codigoCarrera, '|'))
-        {
-            getline(file, nombreCarrera, '|');
-            file >> estadoCarrera;
-            file.ignore();
+        cout << "\nNo hay informacion...";
+    }
+    else
+    {
+        cout << "Ingrese el codigo de la carrera a buscar: ";
+        cin >> codigoBuscar;
 
+        file >> codigoCarrera >> nombreCarrera >> estadoCarrera;
+
+        while(!file.eof())
+        {
             if(codigoBuscar == codigoCarrera)
             {
                 cout << "\nCodigo Carrera: " << codigoCarrera << endl;
@@ -327,15 +262,17 @@ void Carrera::buscar()
 
                 encontrado++;
             }
+
+            file >> codigoCarrera >> nombreCarrera >> estadoCarrera;
         }
 
-        file.close();
+        if(encontrado == 0)
+        {
+            cout << "\nCarrera no encontrada...";
+        }
     }
 
-    if(encontrado == 0)
-    {
-        cout << "\nCarrera no encontrada...";
-    }
+    file.close();
 }
 
 void Carrera::borrar()
@@ -345,8 +282,6 @@ void Carrera::borrar()
     fstream file, file1;
     string codigoBuscar;
     int encontrado = 0;
-
-    cout << "\n---------------- ELIMINAR CARRERA ----------------" << endl;
 
     file.open("Carreras.txt", ios::in);
 
@@ -359,24 +294,24 @@ void Carrera::borrar()
         cout << "Ingrese el codigo de la carrera a eliminar: ";
         cin >> codigoBuscar;
 
-        file1.open("Temporal.txt", ios::out);
+        file1.open("Temporal.txt", ios::app | ios::out);
 
-        while(getline(file, codigoCarrera, '|'))
+        file >> codigoCarrera >> nombreCarrera >> estadoCarrera;
+
+        while(!file.eof())
         {
-            getline(file, nombreCarrera, '|');
-            file >> estadoCarrera;
-            file.ignore();
-
             if(codigoBuscar != codigoCarrera)
             {
-                file1 << codigoCarrera << "|"
-                      << nombreCarrera << "|"
-                      << estadoCarrera << "\n";
+                file1 << left << setw(15) << codigoCarrera
+                      << left << setw(30) << nombreCarrera
+                      << left << setw(10) << estadoCarrera << "\n";
             }
             else
             {
                 encontrado++;
             }
+
+            file >> codigoCarrera >> nombreCarrera >> estadoCarrera;
         }
 
         file.close();
@@ -394,34 +329,29 @@ void Carrera::borrar()
             cout << "\nCarrera eliminada correctamente...";
         }
     }
-}
 
+}
 string Carrera::getnombreCarrera()
 {
-    return this->nombreCarrera;
+    return this -> nombreCarrera;
 }
-
 string Carrera::getcodigoCarrera()
 {
-    return this->codigoCarrera;
+    return this -> codigoCarrera;
 }
-
 bool Carrera::getestadoCarrera()
 {
-    return this->estadoCarrera;
+    return this -> estadoCarrera;
 }
-
 void Carrera::setnombreCarrera(string nombreCarrera)
 {
-    this->nombreCarrera = nombreCarrera;
+    this -> nombreCarrera = nombreCarrera;
 }
-
 void Carrera::setcodigoCarrera(string codigoCarrera)
 {
-    this->codigoCarrera = codigoCarrera;
+    this -> codigoCarrera = codigoCarrera;
 }
-
-void Carrera::setestadoCarrera(bool estadoCarrera)
+void Carrera::setestadoCcarrera(bool estadoCarrera)
 {
-    this->estadoCarrera = estadoCarrera;
+    this -> estadoCarrera = estadoCarrera;
 }

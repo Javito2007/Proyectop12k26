@@ -1,54 +1,95 @@
 //archivo creado por Freddy Muy el dia lunes 4/05/2026
 
-
-
 #include <iostream>
-#include "ConfiguracionEvaluacion.h"  //llama a la clase
-using namespace std;  //para evitar estar usando std
+#include <fstream>
+#include "ConfiguracionEvaluacion.h"
+using namespace std;
 
 ConfiguracionEvaluacion::ConfiguracionEvaluacion()
     : periodo(""), codigoCurso(""), nombreCurso("") {}
+
+
+// Verifica en Asignaciones.txt si existe al menos un alumno asignado
+// al curso con el codigo dado. Retorna true si hay al menos uno.
+
+bool ConfiguracionEvaluacion::cursoTieneAlumnos(const string& codigo) {
+    ifstream file("Asignaciones.txt");
+    if (!file.is_open()) return false;
+
+    string linea;
+    while (getline(file, linea)) {
+        // Ignorar lineas que no sean de cursos (encabezados, separadores, ID)
+        if (linea.find('|') == string::npos)  continue;
+        if (linea.find("REGISTRO") != string::npos) continue;
+        if (linea.find("---")      != string::npos) continue;
+        if (linea.find("===")      != string::npos) continue;
+
+
+        string codLinea = linea.substr(0, linea.find('|'));
+        size_t ini = codLinea.find_first_not_of(" \t\r\n");
+        size_t fin = codLinea.find_last_not_of(" \t\r\n");
+        if (ini == string::npos) continue;
+        codLinea = codLinea.substr(ini, fin - ini + 1);
+
+        if (codLinea == codigo) {
+            file.close();
+            return true;
+        }
+    }
+    file.close();
+    return false;
+}
 
 void ConfiguracionEvaluacion::seleccionarCurso() {
     Cursos temp;
     vector<Cursos> catalogo = temp.catalagoCursosIngSistemas();
 
-
-    //trae los cursos de otra clase ya creada para saber que curso se quiere obtener nota
     cout << "\n===== Catalogo de Cursos =====" << endl;
-    for (int i = 0; i < (int)catalogo.size(); i++)
+    for (int i = 0; i < (int)catalogo.size(); i++) {
+        string cod = catalogo[i].getcodigoCurso();
         cout << "  [" << i + 1 << "] "
-             << catalogo[i].getcodigoCurso() << " - "
-             << catalogo[i].getnombreCurso()  << endl;
+             << cod << " - "
+             << catalogo[i].getnombreCurso();
+
+        // Indicar si hay alumnos asignados para orientar al usuario
+        if (cursoTieneAlumnos(cod))
+            cout << "  (*alumnos asignados*)";
+
+        cout << endl;
+    }
 
     int opcion;
-    cout << "\nSeleccione un curso: ";   //pide el curso que esta desglozado por numero
+    cout << "\nSeleccione un curso: ";
     cin >> opcion;
     cin.ignore();
 
     if (opcion < 1 || opcion > (int)catalogo.size()) {
-        cout << "Opcion invalida. Se usara el primero por defecto." << endl;   //si la opcion no es valida tomara el primer curso de la lista
+        cout << "Opcion invalida. Se usara el primero por defecto." << endl;
         opcion = 1;
     }
 
     codigoCurso = catalogo[opcion - 1].getcodigoCurso();
     nombreCurso = catalogo[opcion - 1].getnombreCurso();
-    cout << "Curso seleccionado: [" << codigoCurso << "] " << nombreCurso << endl;  //nos muestra que curso ha sido seleccionado
+    cout << "Curso seleccionado: [" << codigoCurso << "] " << nombreCurso << endl;
+
+    // Avisar si el curso no tiene alumnos en Asignaciones.txt
+    if (!cursoTieneAlumnos(codigoCurso)) {
+        cout << "[Aviso] Este curso no tiene alumnos asignados en Asignaciones.txt." << endl;
+        cout << "        Podra seleccionarlos manualmente al registrar notas." << endl;
+    }
 }
 
 void ConfiguracionEvaluacion::configurarPeriodo() {
-    cout << "Periodo de evaluacion (Ej: Primer Semestre 2026): ";  //se pide el periodo de evaluacion dependiendo el semestre
+    cout << "Periodo de evaluacion (Ej: Primer Semestre 2026): ";
     getline(cin, periodo);
 }
 
 bool ConfiguracionEvaluacion::almacenarConfiguracion() {
     if (codigoCurso == "" || periodo == "") {
-        cout << "Error: faltan datos de curso o periodo." << endl;  //si no se colocan bien los datos no se pueden ingresar las notas
+        cout << "Error: faltan datos de curso o periodo." << endl;
         return false;
     }
 
-
-    //aca es donde se ingresan las notas de parciales y de actividades y si no se llega a zona minima no nos da acceso a asignar nota de parcial final
     cout << "\n===== Configuracion del Curso =====" << endl;
     cout << "Curso  : [" << codigoCurso << "] " << nombreCurso << endl;
     cout << "Periodo: " << periodo                              << endl;
@@ -64,8 +105,7 @@ bool ConfiguracionEvaluacion::almacenarConfiguracion() {
     return true;
 }
 
-
-//trae los metodos
+// Getters
 string ConfiguracionEvaluacion::getCodigoCurso()       const { return codigoCurso; }
 string ConfiguracionEvaluacion::getNombreCurso()       const { return nombreCurso; }
 string ConfiguracionEvaluacion::getPeriodo()           const { return periodo; }
