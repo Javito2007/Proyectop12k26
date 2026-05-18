@@ -6,6 +6,7 @@
 #include "bitacora.h"
 #include "menuRegistro.h"
 #include "MenuAsignaciones.h"
+#include "menuNotas.h"
 
 using namespace std;
 
@@ -77,8 +78,10 @@ void menuGeneral()
             break;
 
         case 3:
-            cout << "Aqui se colocara el modulo de notas" << endl;
-            cin.get();
+            {
+            SistemaNotas menuNotas;
+            menuNotas.ejecutarMenu();
+            }
             break;
 
         case 4:
